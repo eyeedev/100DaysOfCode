@@ -1,0 +1,62 @@
+html{
+  text-align: center;
+}
+body{
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  text-align: center;
+  background-image: url("./assest/02.jpg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+}
+.tab{
+  position: absolute;
+  width: 35rem;
+  height: 25rem;
+  background-color: rgba(187, 180, 180, 0.7);
+  border-radius: 15px;
+}
+nav{
+  background-color:rgba(219, 213, 213, 0.7) ;
+  height: 30px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  cursor: pointer;
+  user-select: none;
+}
+nav span{
+  justify-self: center;
+  position: relative;
+  left: 36%;
+  font-size: 20px;
+  color: rgb(49, 48, 77);
+  text-shadow: 2px 2px 1px rgb(209, 207, 207);
+  font-weight: bold;
+}
+
+.circles{
+  display: flex;
+  gap: 5px;
+}
+.circle{
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  box-shadow:1px 2px 1px rgb(151, 149, 149) ;
+}
+
+.c-1{
+  background-color: rgb(93, 53, 135);
+}
+.c-2{
+background-color: rgb(163, 103, 177);
+}
+.c-3{
+background-color: rgb(237, 158, 214);
+}

@@ -14,13 +14,14 @@ body{
   width: 500px;
   margin-left: 200px;
   margin-top: 200px;
+  
 
   .step{
     position: relative;
-    width: 400px;
-    height: 100px;
+    width: 300px;
+    height: 60px;
     overflow: hidden;
-    
+
    &.step:nth-child(odd){
     transform: skew(60deg,-30deg) scaleY(0.6667);
    }
@@ -29,32 +30,32 @@ body{
     transform: skew(0,-30deg) scaleY(1.3333);
    }
    &.step:nth-child(1){
-    left: -58px;
+    left: -35px;
     .text{
       margin-top: 0;
     }
    }
    &.step:nth-child(2){
      .text{
-      margin-top: -100px;
+      margin-top: -60px;
      }
    }
    &.step:nth-child(3){
-    left: 58px;
+    left: 34px;
     .text{
-      margin-top: -200px;
+      margin-top: -120px;
     }
    }
    &.step:nth-child(4){
-    left: 115px;
+    left: 69px;
     .text{
-      margin-top: -300px;
+      margin-top: -180px;
     }
    }
    &.step:nth-child(5){
-    left: 173px;
+    left: 103px;
     .text{
-      margin-top: -400px;
+      margin-top: -240px;
     }
    }
 
@@ -62,10 +63,14 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     font-size: 40px;
     color: #fafaf7;
+    opacity: .8;
     transform: translateY(-100px);
    }
   }
+}
+span{
+  transform: scaleY(1.7);
 }

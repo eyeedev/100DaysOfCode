@@ -1,0 +1,71 @@
+html{
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  display: flex;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  background-color: #1d1c1c;
+}
+
+.steps{
+  width: 500px;
+  margin-left: 200px;
+  margin-top: 200px;
+
+  .step{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    overflow: hidden;
+    
+   &.step:nth-child(odd){
+    transform: skew(60deg,-30deg) scaleY(0.6667);
+   }
+
+   &.step:nth-child(even){
+    transform: skew(0,-30deg) scaleY(1.3333);
+   }
+   &.step:nth-child(1){
+    left: -58px;
+    .text{
+      margin-top: 0;
+    }
+   }
+   &.step:nth-child(2){
+     .text{
+      margin-top: -100px;
+     }
+   }
+   &.step:nth-child(3){
+    left: 58px;
+    .text{
+      margin-top: -200px;
+    }
+   }
+   &.step:nth-child(4){
+    left: 115px;
+    .text{
+      margin-top: -300px;
+    }
+   }
+   &.step:nth-child(5){
+    left: 173px;
+    .text{
+      margin-top: -400px;
+    }
+   }
+
+   .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 40px;
+    color: #fafaf7;
+    transform: translateY(-100px);
+   }
+  }
+}

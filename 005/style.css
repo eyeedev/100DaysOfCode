@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&display=swap');
 
 .light-theme{
-  ---background:#fff;
+  ---background:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(199, 216, 235) 80%);
    ---text:#29292b;
   }
 .dark-theme{
@@ -89,6 +89,7 @@ main{
       top:-13rem;
       right: 10rem;
       width: 100%;
+      animation: glow 2s ease-in-out infinite alternate;
 
      span{
       font-family: var(---font-family-s);
@@ -97,6 +98,7 @@ main{
       flex-direction: column;
       font-stretch: wider;
        }
+       
     }
 
     section{
@@ -112,7 +114,10 @@ main{
         height: 30px;
         border-radius: 20px;
         font-weight: bolder;
-        background-image: var(---gradient-color);
+        color: #fff;
+        background: -webkit-linear-gradient(225deg, rgb(251, 175, 21), rgb(251, 21, 242),             
+         rgb(21, 198, 251)) 0% 0% / 300% 300%;
+        animation: gradient_move 3s ease infinite;
 
         &:hover{
           transform: scale(1.1);
@@ -131,5 +136,32 @@ main{
     left: 8rem;
     z-index: 2;
     transform: scaleX(-1);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(255, 255, 255, .7);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, .7), 0 0 10px rgba(255, 255, 255, .7);
+  }
+}
+@keyframes gradient_move {
+  0%{background-position: 0% 92%}
+  50%{background-position: 100% 9%}
+  100%{background-position: 0% 92%}
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    ---background:#fff;
+    ---text:#29292b;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    ---background: linear-gradient(90deg, rgba(7,5,55,1) 0%, rgba(75,12,106,1) 87%);
+    ---text: rgba(255, 255, 255, .7);
   }
 }

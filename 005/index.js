@@ -1,13 +1,23 @@
 let button=document.querySelector(".icon");
-let currentTheme=document.body.className;
 
 button.addEventListener("click",()=>{
-  if(currentTheme=="dark-theme"){
-    document.body.classList.toggle('light-theme');
-    button.innerHTML='light_mode';
-  }else{
-    document.body.classList.toggle('dark-theme');
-    button.innerHTML='dark_mode';
-  }
+  document.body.classList.toggle('dark-theme');
+  const icon=button.innerHTML;
+  const newIcon=icon===
+  'light_mode' ? 'dark_mode' : 'light_mode';
+  button.innerHTML=newIcon;
 })
+
+const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+if (darkTheme.matches) {
+  document.body.classList.toggle('dark-theme');
+  const icon=button.innerHTML;
+  const newIcon=icon===
+  'light_mode' ? 'dark_mode' : 'light_mode';
+  button.innerHTML=newIcon;
+} else {
+  document.body.classList.toggle('light-theme');
+}
+
+
 

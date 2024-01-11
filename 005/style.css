@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&display=swap');
+
+.light-theme{
+  ---background:#fff;
+   ---text:#29292b;
+  }
+.dark-theme{
+ ---background: linear-gradient(90deg, rgba(7,5,55,1) 0%, rgba(75,12,106,1) 87%);
+ ---text: rgba(255, 255, 255, .7);
+}
+:root{
+  ---font-family: "Roboto", sans-serif;
+  ---font-family-s:"Audiowide", sans-serif;
+  ---primary-color:rgba(148, 187, 233,1);
+  ---secondary-color:rgb(238, 174, 202);
+  ---gradient-color:linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,0.8687850140056023) 80%);
+}
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  font-family:  var(---font-family);
+  font-weight: 400;
+  height: 100vh;
+  background-image: var(---background);
+  color: var(---text);
+  user-select: none;
+}
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bolder;
+  text-transform:uppercase;
+
+  .theme span{
+    padding: 0 10px 0 0;
+
+    &.icon{
+      position: absolute;
+      top: 18px;
+      font-size: 20px;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  
+
+}
+nav>ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-grow: 2;
+
+    li{
+      padding: 5px;
+    
+    
+     &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(---primary-color);
+     }
+    }
+}
+
+main{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+
+  article{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-right: 3rem;
+    direction: rtl;
+    right: 4rem;
+    top: -2rem;
+
+    div{
+      position: absolute;
+      top:-13rem;
+      right: 10rem;
+      width: 100%;
+
+     span{
+      font-family: var(---font-family-s);
+      font-size: 70px;
+      display: flex;
+      flex-direction: column;
+      font-stretch: wider;
+       }
+    }
+
+    section{
+      font-size: 12px;
+      width: 60%;
+      position: absolute;
+      top:4rem;
+      right: 10rem;
+
+      button{
+        border: none;
+        width: 100px;
+        height: 30px;
+        border-radius: 20px;
+        font-weight: bolder;
+        background-image: var(---gradient-color);
+
+        &:hover{
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  div>img{
+    padding: 0;
+    width: 580px;
+    height: 550px;
+    position: relative;
+    top: 37px;
+    left: 8rem;
+    z-index: 2;
+    transform: scaleX(-1);
+  }
+}

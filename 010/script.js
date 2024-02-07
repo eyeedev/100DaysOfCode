@@ -6,8 +6,6 @@ const clear = document.querySelector('#clear');
 let canDraw = false;
 let ctx = canvas.getContext('2d');
 
-
-
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx.lineWidth = 3;

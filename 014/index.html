@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main"> 
+      <div class="rgb-card">
+        <span class="box"><span class="square"></span></span>
+
+
+        <span>Red: <input type="range" class="rgb" id="red" value="255" min="0" max="255"></span> 
+        <span>Green: <input type="range" class="rgb" id="green" value="0" min="0" max="255"></span>
+        <span>Blue: <input type="range" class="rgb" id="blue" value="0" min="0" max="255"></span>
+
+        <span>RGB: <input type="text" id="rgb" value="" readonly></span>
+        <span>HEX: <input type="text" id="hex" value="" readonly></span>
+      </div>
+
+      <div class="hsl-card">
+        <span class="box"><span class="square-hsl"></span></span>
+
+
+        <span>Hue: <input type="range" class="hsl" id="hue" value="0" min="0" max="360"></span> 
+        <span>Saturation: <input type="range" class="hsl" id="saturation" value="100" min="0" max="100"></span>
+        <span>Lightness: <input type="range" class="hsl" id="lightness" value="50" min="0" max="100"></span>
+
+        <span>HSL: <input type="text" id="hsl" value="" readonly></span>
+      </div>
+       
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

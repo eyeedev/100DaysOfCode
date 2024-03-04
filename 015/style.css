@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html{
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(236, 40%, 55%);
+
+    .container{
+        width: 70%;
+        height: 600px;
+        background-color: #ffff;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: .3rem;
+
+    .progress-info{
+        display: flex;
+        width: 98%;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(213, 223, 238);
+        font-size: 12px;
+
+        span:first-child{
+            color: rgb(52, 105, 245);
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    .progress-range{
+        width: 100%;
+        height: 18px;
+        background-color: hsl(218, 52%, 85%);
+        border-radius: 10px;
+    }
+}
+
+.game-board{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallows{
+    width: 400px;
+    height: 500px;
+    content: '';
+    position: relative;
+    bottom: 50px;
+}
+
+.ground{
+    background-color: black;
+    width: 350px;
+    height: 5px;
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+}
+
+.beam{
+    border-top:5px solid black;
+    border-left:5px solid black;
+    width: 230px;
+    height: 380px;
+    position: absolute;
+    bottom: 40px;
+    left: 90px;
+}
+
+.rope{
+    border-right:5px solid black;
+    width: 300px;
+    height: 70px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+
+.head{
+    border:5px solid black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    right: 44px;
+}
+
+.neck{
+    border-right:5px solid black;
+    height: 80px;
+    position: absolute;
+    top: 215px;
+    right: 76px;
+}
+
+.hands{
+    border-left:5px solid black;
+    border-top:5px solid black;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 250px;
+    right: 51px;
+    transform: rotate(45deg);
+}
+
+.legs{
+    border-left:5px solid black;
+    border-top:5px solid black;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 145px;
+    right: 51px;
+    transform: rotate(45deg);
+}
+
+.play{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .context{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .keyboard{
+        width: 75%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .key{
+            width: 12px;
+            height: 12px;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 0 3px;
+            background-color: rgb(93, 99, 185);
+            color: #ffff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.word-container{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    gap: 2rem;
+
+    .word{
+        font-size: 30px;
+        text-transform: capitalize;
+        letter-spacing: 1rem;
+        font-weight: 700;
+
+      
+    }
+
+    .hint{
+        font-size: 13px;
+    }
+}
+
+.game-name{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 60px;
+    left: 30px;
+}
+
+.letter-input{
+    text-align: center;
+    border: none;
+    width: 30px;
+    height: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 1px;
+
+    &:focus{
+        outline: none;
+    }
+
+}

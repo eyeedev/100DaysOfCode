@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+119<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,12 +29,24 @@
         </div>
        
         <div class="play">
-          <div class="context"></div>
+          <div class="context">
+            <div class="word-container">
+              <span class="word"></span>
+              <span class="hint"></span>
+              <span class="mistakes">Incorrect guesses: <span class="mistakeNum"></span></span>
+            </div>
+            
+          </div>
           <div class="keyboard"></div>
         </div>
       </div>
+      <audio id="myAudio">
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+      </audio>
       
     </div>
   </body>
+  <script src="words.js"></script>
   <script src="script.js"></script>
 </html>

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root{
+    --width:'';
+}
+
+
 html{
     margin:0;
     box-sizing: border-box;
@@ -39,7 +44,7 @@ header{
 
     .progress-info{
         display: flex;
-        width: 98%;
+        width: 95%;
         justify-content: space-between;
         align-items: center;
         color: rgb(213, 223, 238);
@@ -52,11 +57,20 @@ header{
         }
     }
     .progress-range{
-        width: 100%;
+        width: 630px;
         height: 18px;
         background-color: hsl(218, 52%, 85%);
         border-radius: 10px;
     }
+}
+
+.progress-range::after{
+    width: var(--width);
+    height: 18px;
+    position: absolute;
+    content: '';
+    border-radius: 10px;
+    background-color: rgb(52, 105, 245);
 }
 
 .game-board{
@@ -126,8 +140,8 @@ header{
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 250px;
-    right: 51px;
+    top: 249px;
+    right:50px;
     transform: rotate(45deg);
     visibility: hidden;
 }
@@ -136,8 +150,8 @@ header{
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 250px;
-    right: 52px;
+    top: 248px;
+    right: 53px;
     transform: rotate(45deg);
     visibility: hidden;
 }
@@ -158,8 +172,8 @@ header{
     height: 50px;
     width: 50px;
     position: absolute;
-    bottom: 142px;
-    right: 52px;
+    bottom: 144px;
+    right: 54px;
     transform: rotate(45deg);
     visibility: hidden;
 }
@@ -221,6 +235,8 @@ header{
         text-transform: capitalize;
         letter-spacing: 1rem;
         font-weight: 700;
+        display: flex;
+        flex-direction: row;
 
       
     }
@@ -251,6 +267,8 @@ header{
     font-size: 30px;
     text-transform: uppercase;
     margin: 1px;
+    text-align: center;
+
 
     &:focus{
         outline: none;
@@ -264,7 +282,7 @@ header{
     position: relative;
     bottom: 40px;
 
-    .mistakesNum{
+    .mistakeNum{
         color: red;
         font-size: 15px;
         font-weight: 500;

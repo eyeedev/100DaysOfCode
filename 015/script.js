@@ -18,6 +18,10 @@ const mistakes = document.querySelector('.mistake');
 const mistakeCounter = document.querySelector('.mistakeNum');
 const pointsDisplay = document.querySelector(".points");
 const progressRange = document.querySelector(".progress-range");
+const winSound = document.getElementById('win');
+const gameOverSound = document.getElementById('gameover');
+const rightSound = document.getElementById('right');
+const wrongSound = document.getElementById('wrong');
 
 let inputs = [];
 let keys = []; // inam baaiid midoonam be daardet bokhore
@@ -68,17 +72,17 @@ function handleKeyClick(key) {
   if (!isCorrect) {
     mistake += 1;
     gallowsIndex += 1;
+    wrongSound.play();
     updateMistakes(mistakeCounter);
     paintGallows();
   }
   if (mistake === 6) {
      points = 0;
      updatePoints();
+     gameOverSound.play();
      setTimeout(resetGame, 700);
   }
 }
-
-
 
 
 function showShuffledWords() {
@@ -94,7 +98,6 @@ function showShuffledWords() {
     word.appendChild(letterInput);
     inputs.push(letterInput);
   }
-
 
   //show the hint part
 
@@ -139,7 +142,7 @@ function resetGame() {
   }
 
   //clean word place
- //for(let i = 0; i<inputs.length; i++){inputs[i].innerText='-';}
+ for(let i = 0; i<inputs.length; i++){inputs[i].innerText='-';}
   const letters = document.querySelectorAll('.letter-input');
   letters.forEach(letter => word.removeChild(letter));
   inputs = [];
@@ -166,6 +169,7 @@ function checkWordCompletion() {
 
     // Move to the next word
     currentIndex = (currentIndex + 1) % shuffledWords.length;
+    winSound.play();
 
     timeout = setTimeout(resetGame, 500);
   }
@@ -177,7 +181,10 @@ function updatePoints() {
 
   //the progress
   const percentage = (12.6 * points);
-  progressRange.style.setProperty("--width",`${percentage}px`)
+  progressRange.style.setProperty("--width",`${percentage}px`);
+
+  //play level up sound
+  rightSound.play();
 }
 
 function Init() {

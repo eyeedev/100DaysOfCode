@@ -24,7 +24,7 @@ const rightSound = document.getElementById('right');
 const wrongSound = document.getElementById('wrong');
 
 let inputs = [];
-let keys = []; // inam baaiid midoonam be daardet bokhore
+let keys = []; 
 
 let currentIndex = 0; 
 let mistake = 0; 

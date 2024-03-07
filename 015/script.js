@@ -176,12 +176,11 @@ function checkWordCompletion() {
 }
 
 function updatePoints() {
-  // points mitoone voroodi inn taabe bashe
   pointsDisplay.textContent = `${points}/50`;
 
   //the progress
-  const percentage = (12.6 * points);
-  progressRange.style.setProperty("--width",`${percentage}px`);
+  const percentage = (points / 50)*100;
+  progressRange.style.setProperty("--width",`${percentage}%`);
 
   //play level up sound
   rightSound.play();

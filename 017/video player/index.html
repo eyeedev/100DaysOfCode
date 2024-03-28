@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+       <div class="video-container">
+        <video src="./video/God.mp4" id="video"
+         autoplay muted loop>
+       </video>
+       <div class="controls">
+        <div id="timeline" class="timeline">
+          <div id="progress-bar" class="progress-bar"></div>
+       </div>
+       <div id="time-display" class="time-display">
+        <span id="current-time">00:00</span> <span id="duration">00:00</span>
+      </div>
+       <div class="buttons">
+        <div class="play-btn">
+          <img src="./icons/rotate-left-solid.svg" class="icon control-btn" id="backward">   
+          <div id="playbtn">
+            <img src="./icons/pause-solid.svg" class="icon control-btn" id="pause">
+          </div>
+          <img src="./icons/rotate-right-solid.svg" class="icon control-btn" id="forward">
+      </div>
+      <div class="volume-control">
+         <img src="./icons/volume-xmark-solid.svg" class="icon control-btn" id="volume">
+         <input type="range"  id="volume-range" min="0" max="100" value="0">
+      </div>
+       </div>
+       
+       </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

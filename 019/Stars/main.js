@@ -82,7 +82,7 @@ function drawLines() {
         mouse.y -circleArray[i].y 
       ); 
 
-      if(distanceToMouse <= 300){
+      if(distanceToMouse <= 250){
         for (var j = 0; j < circleArray.length; j++) {
           if( i !== j){
             var distance = Math.hypot(

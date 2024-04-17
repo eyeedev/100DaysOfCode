@@ -1,0 +1,236 @@
+:root{
+  --main-color : rgb(250, 248, 239);
+  --text-color1:  rgb(119, 110, 101);
+  --text-color2 :  rgb(238, 228, 218);
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  
+}
+
+.game-panel{
+  display: block;
+  flex-direction: column;
+  width: 700px;
+  height: 99vh;
+  background-color: var(--main-color);
+  border: 1px solid white;
+
+}
+
+
+.totoro{
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  right: 10px;
+  bottom: 300px;
+}
+
+.spirited{
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: 100px;
+  bottom: 30px;
+}
+
+.dashboard{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+    .scores{
+       width: 450px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+      }
+
+     .game-name{
+      color : var(--text-color1);
+      font-size: 60px;
+      font-weight: 500;
+     } 
+
+     .score{
+        display: flex;
+        gap: .5rem;
+     }
+     .score div{
+        background-color: rgb(187, 173, 160) ;
+        width: 110px;
+        height: 45px;
+        padding: 2px 0;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .1rem;
+        color: var(--text-color2);
+        font-size: 15px;
+     }
+
+     .score div span{
+       color: rgb(255, 255, 255);
+       font-size: 24PX;
+       font-weight: 500;
+     }
+}
+
+.info{
+  width:450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color1);
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 25px;
+
+   button{
+    outline: none;
+    border: none;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #8F7A66;
+    color: var(--text-color2);
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover{
+      cursor: pointer;
+    }
+   }
+}
+
+.game-container{
+    width: 450px;
+    height: 450px;
+
+    background-color: #CDC1B4;
+    border: 8px solid  #8F7A66;
+    border-radius: 6px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+    top: 20px;
+}
+
+.tile{
+
+  border: 6px solid #8F7A66;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 101.3px;
+  height: 101.3px;
+  background: rgba(238, 228, 218, .35);
+  color: #776E65;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay .message {
+  font-size: 58px; 
+  font-weight: 500;
+  color:  rgba(246, 94, 59,.9);
+}
+.hidden {
+  display: none;
+}
+
+.t2{
+  background-color: #EEE4DA;
+}
+
+.t4{
+ background-color: #EDE0C8;
+}
+
+.t8{
+  background-color: #F2B179;
+  color: #ffffff;
+}
+
+.t16{
+  background-color: #F8956D;
+  color: #ffffff;
+}
+
+.t32{
+  background-color: #F67C5F;
+  color: #ffffff;
+}
+
+.t64{
+  background-color: #F65E3B;
+  color: #ffffff;
+}
+
+.t128{
+  background-color: #EDCF72;
+  color: #ffffff;
+}
+
+.t256{
+  background-color: #EDCC61;
+  color: #ffffff;
+}
+
+.t512{
+  background-color: #EDC850;
+  color: #ffffff;
+}
+
+.t1024{
+  background-color: #EDC53F;
+  color: #ffffff;
+}
+
+.t2048{
+  background-color: #EDC22D;
+  color: #ffffff;
+}
+
+.t4096{
+  background-color: #FE3D3D;
+  color: #ffffff;
+}
+
+.t8192{
+  background-color: #FF2020;
+  color: #ffffff;
+}

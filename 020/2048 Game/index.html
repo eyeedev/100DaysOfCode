@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="game-panel">
+        <div class="dashboard">
+          <div class="scores">
+            <div class="game-name">2048</div>
+            <div class="score">
+              <div class="your-score">SCORE <span id="scoreContainer">0</span></div>
+              <div>BEST<span id="best-score">2700</span></div>
+            </div>
+          </div>
+          <div class="info">
+            <span><b>Play 2048 Game Online</b> <br>
+            Join the numbers and get to the <b>2048 tile!</b></span>
+            <button id="restart">New Game</button>
+          </div>  
+        </div>
+        <div id="gameOverOverlay" class="overlay hidden">
+          <div class="message">Game Over</div>
+        </div>
+        <div id="winOverlay" class="overlay hidden">
+          <div class="message">You Win!</div>
+        </div>
+        <div class="game-container">
+
+        </div>
+      </div>
+    
+      <img src="./assets/Totoro & Makurokurosuke.jpg" class="totoro">
+      <img src="./assets/Spirited Away · Boh and Yu Bird by Momoncha.png" class="spirited" />
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Tracker</title>
+    <script type="module" crossorigin src="/assets/index-Bsthp1D6.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3s25_Be.css">
+  </head>
+  <body>
+    <div id="app">
+      <div >
+        <svg
+          version="1.1"
+          width="400"
+          height="400"
+          viewBox="0 0 400 400"
+          xmlns="http://www.w3.org/2000/svg"
+          class="circles"
+        >
+          <!-- Background circles -->
+          <g fill="tracks" stroke-width="25" >
+            <circle cx="200" cy="200" r="100" stroke="#310912" />
+            <circle cx="200" cy="200" r="73" stroke="#2a4202" />
+            <circle cx="200" cy="200" r="46" stroke="#031f25" />
+          </g>
+
+
+          <g fill="transparent" stroke-width="25" class="fills">
+            <circle
+              class="redCircle circle"
+              cx="200"
+              cy="200"
+              r="100"
+              stroke="#d02340"
+              stroke-dasharray="0 1000"
+              stroke-dashoffset="0"
+              stroke-linecap="round"
+            />
+            <circle
+              class="greenCircle circle"
+              cx="200"
+              cy="200"
+              r="73"
+              stroke="#6adf2f"
+              stroke-dasharray="0 1000"
+              stroke-linecap="round"
+            />
+            <circle
+              class="blueCircle circle"
+              cx="200"
+              cy="200"
+              r="46"
+              stroke="#2fb7c4"
+              stroke-dasharray="0 1000"
+              stroke-linecap="round"
+            />
+          </g>
+
+          <svg viewBox="0 0 30 30" width="20" x="193" y="-97" >
+            <path
+                d="M0,10 h20 M10,0 l10,10 l-10,10"
+                stroke="black"
+                fill="none"
+                stroke-width="3"
+              />
+          </svg>
+          <svg viewBox="0 0 30 30" width="20" x="192" y="-70" >
+            <path
+                d="M0,10 h20 M10,0 l10,10 l-10,10 M16,0 l10,10 l-10,10"
+                stroke="black"
+                fill="none"
+                stroke-width="3"
+              />
+          </svg>
+          <svg viewBox="0 0 30 30" width="20" x="193" y="-28" >
+            <path
+                d="M0,10 h20 M10,0 l10,10 l-10,10"
+                stroke="black"
+                fill="none"
+                stroke-width="3"
+                transform="rotate(-90)"
+              />
+          </svg>
+
+        </svg>
+      </div>
+      <div class="sliders">
+        <input type="range" id="red" value="0" min="0" max="100" />
+        <input type="range" id="green" value="0" min="0" max="100" />
+        <input type="range" id="blue" value="0" min="0" max="100" />
+      </div>
+    </div>
+  </body>
+</html>

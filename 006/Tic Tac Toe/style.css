@@ -3,10 +3,10 @@
 
 :root{
   --backgroundcolor: rgb(45,47,49);
-  --secondary-background: rgb(64, 40, 92);
+  --secondary-background: rgb(227, 157, 51);
   --light: rgba(243, 248, 255,.8);
   --red: rgb(184, 0, 0);
-  --yellow: rgb(255, 152, 0);
+  --blue: rgb(2, 72, 203);
 }
 body{
   margin: 0;
@@ -27,7 +27,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 1px 2px 4px rgba(189, 195, 204, 0.5);
+  box-shadow: 1px 2px 14px rgba(189, 195, 204, 0.5);
   color: var(--light);
 }
 .players{
@@ -50,8 +50,8 @@ main{
          border-bottom: 1px solid var(--red);
       }
       &.player-O span{
-         color: var(--yellow);
-         border-bottom: 1px solid var(--yellow);
+         color: var(--blue);
+         border-bottom: 1px solid var(--blue);
       }
     }
 }
@@ -82,4 +82,10 @@ main{
       transform: scale(1.02);
     }
   }
+}
+
+h1{
+  color: var(--secondary-background);
+  font-weight: 700;
+  font-size: 40px;
 }

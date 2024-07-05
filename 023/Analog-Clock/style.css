@@ -1,0 +1,93 @@
+html {
+    background: #000;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .clock {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
+  }
+  
+  .hand {
+    position: absolute;
+    transform-origin: 50% 100%;
+    translate: -50% -100%;
+    background-color: #333;
+  }
+  
+  .hour {
+    height: 150px;
+    width: 13px;
+    border-radius: 10px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color: #49108B;
+  }
+  
+  .minute {
+    height: 190px;
+    width: 6px;
+    border-radius: 5px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color: #7E30E1;
+  }
+  
+  .second {
+    height: 210px;
+    width: 3px;
+    background-color: #E26EE5;
+    border-radius: 5px;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: gold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 3;
+  }
+  
+  .line {
+    position: absolute;
+    background-color: #F3F8FF;
+    width: 2px;
+    height: 20px;
+    transform-origin: 50% 100%;
+    translate: -50% -100%;
+  }
+  
+  .line.main {
+    width: 4px;
+    height: 30px;
+    background-color: gold;
+  }
+  
+  .number {
+    position: absolute;
+    translate: -50% -50%;
+    font-size: 25px;
+  }

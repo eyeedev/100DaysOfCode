@@ -178,7 +178,7 @@ main{
   position: relative;
   left: 1rem;
   margin-bottom: 2rem;
-  gap: 7.5rem;
+  gap: 7.6rem;
 }
 
 .cards{
@@ -209,5 +209,9 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 6rem;
+
+  li{
+    width: 100px;
+  }
 }

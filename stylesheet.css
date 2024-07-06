@@ -48,8 +48,13 @@ nav{
   }
 }
 
+.right a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .name{
-  font-family: "Caveat", cursive;
+  font-family: "Caveat", cursive !important;
   font-size: 40px;
   font-weight: bolder;
 }
@@ -94,6 +99,7 @@ main{
 
 .slider{
   width: 100%;
+  margin-top: 2rem;
   height: var(--height);
   mask-image: linear-gradient(
     to right,
@@ -139,4 +145,69 @@ main{
 
 .slider .item:hover{
   filter: grayscale(0);
+}
+
+.all-projects{
+  padding-top: 6rem;
+ 
+}
+
+.all-projects a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .6rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.icon{
+  width: 25px;
+  height: 25px;
+  color: #f1eeee;
+}
+
+.header{
+  width: 200vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 2rem;
+  border-bottom: 1px solid #f1eeee;
+  position: relative;
+  left: 1rem;
+  margin-bottom: 2rem;
+  gap: 7.5rem;
+}
+
+.cards{
+  padding: 0 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.card a{
+ text-decoration: none;
+ color: #f1eeee;
+}
+.cards .card img{
+  width: 150px;
+  height: 150px;
+}
+
+
+.cards p{
+  margin-top: 2PX;
+}
+
+.project-sub {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
 }

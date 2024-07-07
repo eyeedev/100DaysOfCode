@@ -22,14 +22,22 @@ body{
   font-family:  var(---font-family);
   font-weight: 400;
   height: 100vh;
+  width: 100%;
   background-image: var(---background);
   color: var(---text);
   user-select: none;
+  display: block;
+  position: relative;
 }
 header{
+  position: absolute;
+  width: 90%;
+  padding: 0 2rem;
+  margin-left: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  gap: 30rem;
   font-size: 15px;
   font-weight: bolder;
   text-transform:uppercase;
@@ -47,9 +55,10 @@ header{
       }
     }
   }
+}
   
 
-}
+
 nav>ul{
     display: flex;
     list-style: none;
@@ -74,6 +83,8 @@ main{
   display: flex;
   justify-content:flex-start;
   align-items: center;
+  position: relative;
+  top: 5rem;
 
   article{
     width: 100%;
@@ -86,7 +97,7 @@ main{
 
     div{
       position: absolute;
-      top:-13rem;
+      top:-9rem;
       right: 10rem;
       width: 100%;
       animation: glow 2s ease-in-out infinite alternate;
@@ -105,10 +116,11 @@ main{
       font-size: 12px;
       width: 60%;
       position: absolute;
-      top:4rem;
+      top:10rem;
       right: 10rem;
 
       button{
+        margin-top: .2rem;
         border: none;
         width: 100px;
         height: 30px;
@@ -127,12 +139,12 @@ main{
     }
   }
 
-  div>img{
+  div img{
     padding: 0;
     width: 580px;
     height: 550px;
     position: relative;
-    top: 37px;
+    bottom: -7rem;
     left: 8rem;
     z-index: 2;
     transform: scaleX(-1);

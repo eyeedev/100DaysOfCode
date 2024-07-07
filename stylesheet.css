@@ -186,23 +186,24 @@ main{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 5rem;
   flex-wrap: wrap;
 }
 
 .card a{
  text-decoration: none;
  color: #f1eeee;
+ margin: 15rem 0;
 }
 .cards .card img{
-  width: 12rem;
-  height: 9rem;
+  width: 16rem;
+  height: 10rem;
   border-radius: 5px;
 }
 
 
 .cards p{
-  margin-top: 3PX;
+  margin: 3px 0 4rem 0;
 }
 
 .project-sub {

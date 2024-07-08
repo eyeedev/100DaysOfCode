@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="./assets/index-Q1jreXsi.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BOHbJGap.css">
+  </head>
+  <body>
+    <div id="app">
+       <div class="video-container">
+        <video src="./assets/God-Chl_ypBC.mp4" id="video"
+         autoplay muted loop>
+       </video>
+       <div class="controls">
+        <div id="timeline" class="timeline">
+          <div id="progress-bar" class="progress-bar"></div>
+       </div>
+       <div id="time-display" class="time-display">
+        <span id="current-time">00:00</span> <span id="duration">00:00</span>
+      </div>
+       <div class="buttons">
+        <div class="play-btn">
+          <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%20fill='white'%3e%3cpath%20d='M48.5%20224H40c-13.3%200-24-10.7-24-24V72c0-9.7%205.8-18.5%2014.8-22.2s19.3-1.7%2026.2%205.2L98.6%2096.6c87.6-86.5%20228.7-86.2%20315.8%201c87.5%2087.5%2087.5%20229.3%200%20316.8s-229.3%2087.5-316.8%200c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200c62.5%2062.5%20163.8%2062.5%20226.3%200s62.5-163.8%200-226.3c-62.2-62.2-162.7-62.5-225.3-1L185%20183c6.9%206.9%208.9%2017.2%205.2%2026.2s-12.5%2014.8-22.2%2014.8H48.5z'/%3e%3c/svg%3e" class="icon control-btn" id="backward">   
+          <div id="playbtn">
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20320%20512'%20fill='white'%3e%3cpath%20d='M48%2064C21.5%2064%200%2085.5%200%20112V400c0%2026.5%2021.5%2048%2048%2048H80c26.5%200%2048-21.5%2048-48V112c0-26.5-21.5-48-48-48H48zm192%200c-26.5%200-48%2021.5-48%2048V400c0%2026.5%2021.5%2048%2048%2048h32c26.5%200%2048-21.5%2048-48V112c0-26.5-21.5-48-48-48H240z'/%3e%3c/svg%3e" class="icon control-btn" id="pause">
+          </div>
+          <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%20fill='white'%3e%3cpath%20d='M463.5%20224H472c13.3%200%2024-10.7%2024-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2%205.2L413.4%2096.6c-87.6-86.5-228.7-86.2-315.8%201c-87.5%2087.5-87.5%20229.3%200%20316.8s229.3%2087.5%20316.8%200c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200c-62.5%2062.5-163.8%2062.5-226.3%200s-62.5-163.8%200-226.3c62.2-62.2%20162.7-62.5%20225.3-1L327%20183c-6.9%206.9-8.9%2017.2-5.2%2026.2s12.5%2014.8%2022.2%2014.8H463.5z'/%3e%3c/svg%3e" class="icon control-btn" id="forward">
+      </div>
+      <div class="volume-control">
+         <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20576%20512'%20fill='white'%3e%3cpath%20d='M301.1%2034.8C312.6%2040%20320%2051.4%20320%2064V448c0%2012.6-7.4%2024-18.9%2029.2s-25%203.1-34.4-5.3L131.8%20352H64c-35.3%200-64-28.7-64-64V224c0-35.3%2028.7-64%2064-64h67.8L266.7%2040.1c9.4-8.4%2022.9-10.4%2034.4-5.3zM425%20167l55%2055%2055-55c9.4-9.4%2024.6-9.4%2033.9%200s9.4%2024.6%200%2033.9l-55%2055%2055%2055c9.4%209.4%209.4%2024.6%200%2033.9s-24.6%209.4-33.9%200l-55-55-55%2055c-9.4%209.4-24.6%209.4-33.9%200s-9.4-24.6%200-33.9l55-55-55-55c-9.4-9.4-9.4-24.6%200-33.9s24.6-9.4%2033.9%200z'/%3e%3c/svg%3e" class="icon control-btn" id="volume">
+         <input type="range"  id="volume-range" min="0" max="100" value="0">
+      </div>
+       </div>
+       
+       </div>
+    </div>
+  </body>
+</html>

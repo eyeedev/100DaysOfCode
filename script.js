@@ -1,13 +1,33 @@
 let cards = document.querySelectorAll('.card');
-let canvas = document.getElementById('canvas');
+let all = document.getElementById('all');
+let games = document.getElementById('games');
+let canvasPart = document.getElementById('canvas');
+let svg = document.getElementById('svg');
+let cssPlaying = document.getElementById('css');
 
-function showCanvasCards() {
+function showCards(type) {
+   for(let i = 0; i < cards.length; i++){
+    let card = cards[i]
+    card.style.display = '';
+   }
+
     cards.forEach(card => {
         let cardType = card.getAttribute("data-type");
-        if (cardType !== 'canvas') {
+        if (cardType !== type) {
             card.style.display = "none";
         }
     });
 }
 
-canvas.addEventListener('click', showCanvasCards);
+canvasPart.addEventListener('click', () => showCards('canvas'));
+games.addEventListener('click', ()=>showCards('game'));
+svg.addEventListener('click', ()=>showCards('svg'));
+cssPlaying.addEventListener('click', ()=>showCards('css'));
+
+
+all.addEventListener('click', ()=>{
+    for(let i = 0; i < cards.length; i++){
+        let card = cards[i]
+        card.style.display = '';
+       }
+});

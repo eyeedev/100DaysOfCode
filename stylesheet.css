@@ -188,6 +188,7 @@ main{
   align-items: flex-start;
   gap: 5rem;
   flex-wrap: wrap;
+
 }
 
 .card a{
@@ -196,7 +197,7 @@ main{
  margin: 15rem 0;
 }
 .cards .card img{
-  width: 16rem;
+  width: 13rem;
   height: 10rem;
   border-radius: 5px;
 }
@@ -215,6 +216,10 @@ main{
 
   li{
     width: 100px;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 

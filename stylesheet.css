@@ -212,7 +212,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 9rem;
+  gap: 6rem;
 
   li{
     width: 100px;
@@ -226,4 +226,21 @@ main{
 .header a{
   display: flex;
   align-items: center;
+}
+
+.project-sub li{
+  transition: color 0.3s ease;
+}
+
+.project-sub li:hover{
+  scale: 1.1;
+}
+
+
+.project-sub li:hover {
+  color: #FF6EC7;
+}
+
+::-webkit-scrollbar {
+  display: none; 
 }

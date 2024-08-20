@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(243, 235, 237);
+}
+
+.open-button{
+    z-index: 20;
+    background-color: pink;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: scale .4s ease;
+
+     &:hover{
+        scale: 1.1;
+     }
+}
+
+.menu-item{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        background: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.home{
+    left: -10px;
+    rotate: -90deg;
+    background: rgb(151, 151, 231);
+}
+
+.about{
+    top: -20px;
+    left: 84px;
+    background: rgb(151, 231, 151);
+}
+
+.services{
+    right: -10px;
+    rotate: 90deg;
+    background: rgb(231, 151, 151);
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+}
+
+.menu-list{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rotateIn{
+    display: flex;
+    animation: rotateIn 0.5s ease forwards;
+}
+
+.rotateOut{
+    animation: rotateOut 0.5s ease forwards;
+}
+
+li img{
+    width: 50px;
+    height: 30px;
+}
+
+@keyframes rotateIn {
+    0%{
+        display: none;
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    100%{
+        display: flex;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateOut {
+    0%{
+        display: flex;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        display: none;
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+}

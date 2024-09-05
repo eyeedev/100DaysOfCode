@@ -1,7 +1,8 @@
-html{
+html {
   text-align: center;
 }
-body{
+
+body {
   margin: 0;
   font-family: 'Kanit', sans-serif;
   display: flex;
@@ -13,15 +14,32 @@ body{
   align-items: center;
   justify-content: center;
 }
-.tab{
+
+.tab {
   position: absolute;
   width: 35rem;
   height: 25rem;
   background-color: rgba(187, 180, 180, 0.7);
   border-radius: 15px;
 }
-nav{
-  background-color:rgba(219, 213, 213, 0.7) ;
+
+
+@media (max-width: 768px) {
+  .tab {
+    width: 80%; 
+    height: 60%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    width: 90%; 
+    height: 50%; 
+  }
+}
+
+nav {
+  background-color: rgba(219, 213, 213, 0.7);
   height: 30px;
   border-radius: 15px 15px 0 0;
   display: flex;
@@ -30,7 +48,8 @@ nav{
   cursor: pointer;
   user-select: none;
 }
-nav span{
+
+nav span {
   justify-self: center;
   position: relative;
   left: 36%;
@@ -40,23 +59,43 @@ nav span{
   font-weight: bold;
 }
 
-.circles{
+
+@media (max-width: 480px) {
+  nav span {
+    left: 0;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.circles {
   display: flex;
   gap: 5px;
 }
-.circle{
+
+.circle {
   width: 11px;
   height: 11px;
   border-radius: 100%;
-  box-shadow:1px 2px 1px rgb(151, 149, 149) ;
+  box-shadow: 1px 2px 1px rgb(151, 149, 149);
 }
 
-.c-1{
+
+@media (max-width: 480px) {
+  .circles {
+    margin-left: 10px;
+  }
+}
+
+.c-1 {
   background-color: rgb(93, 53, 135);
 }
-.c-2{
-background-color: rgb(163, 103, 177);
+
+.c-2 {
+  background-color: rgb(163, 103, 177);
 }
-.c-3{
-background-color: rgb(237, 158, 214);
+
+.c-3 {
+  background-color: rgb(237, 158, 214);
 }

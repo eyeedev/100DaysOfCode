@@ -1,43 +1,51 @@
-html{
+html {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
 }
-.row{
+
+.row {
   display: block;
 }
-.box{
-  display:inline-flex;
+
+.box {
+  display: inline-flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 40px;
   font-size: 18px;
 }
-.box p{
+
+.box p {
   margin: 15px;
 }
-.switch input{
+
+.switch input {
   display: none;
 }
-.switch{
+
+.switch {
   display: flex;
   background-color: #ccc;
-  width:60px ;
+  width: 60px;
   height: 30px;
   border-radius: 27px;
   cursor: pointer;
   position: relative;
   transition: background-color .5s;
 }
-.switch::before{
+
+.switch::before {
   position: relative;
   width: 26px;
   height: 26px;
@@ -48,44 +56,54 @@ body{
   top: 1.5px;
   transition: .5s;
 }
-.switch:has(input:checked)::before{
+
+.switch:has(input:checked)::before {
   left: 31.5px;
   transition: .5s;
 }
-.switch:has(input:checked){
+
+.switch:has(input:checked) {
   background-color: rgb(31, 172, 143);
   transition: .5s;
 }
-.switch:focus{
+
+.switch:focus {
   outline: none;
   box-shadow: 0px 0px 3px #6bb9c7;
   transition: .5s;
 }
-.switch:has(input:disabled){
+
+.switch:has(input:disabled) {
   cursor: not-allowed;
-  background-color:  #949393;
+  background-color: #949393;
 }
-.switch.rectangular{
+
+.switch.rectangular {
   border-radius: 5px;
 }
-.switch.switch.rectangular::before{
+
+.switch.switch.rectangular::before {
   border-radius: 5px;
 }
-.switch.linear{
+
+.switch.linear {
   height: 3px;
 }
-.switch.linear::before{
+
+.switch.linear::before {
   translate: -12% -50%;
-  box-shadow:  0px 0px 5px #9c9c9c;
+  box-shadow: 0px 0px 5px #9c9c9c;
 }
-.switch.linear:has(input:checked)::before{
+
+.switch.linear:has(input:checked)::before {
   left: 39px;
 }
-p.linear{
+
+p.linear {
   margin-top: 30px;
 }
 
-.c-l::after{
+.c-l::after {
   position: absolute;
   width: 7px;
   height: 7px;
@@ -98,18 +116,18 @@ p.linear{
   transition: .5s;
 }
 
-.c-l:has(input:checked)::after{
+.c-l:has(input:checked)::after {
   width: 2px;
   height: 10px;
   border: none;
   border-radius: 1px;
-  background-color:  rgb(31, 172, 143);
+  background-color: rgb(31, 172, 143);
   left: 43.5px;
   top: 10px;
 }
 
- .line1{
-  position:absolute;
+.line1 {
+  position: absolute;
   background-color: #ccc;
   width: 3px;
   height: 20px;
@@ -119,7 +137,8 @@ p.linear{
   transform: rotate(45deg);
   transition: .5s;
 }
-.line2{
+
+.line2 {
   position: absolute;
   background-color: #ccc;
   width: 3px;
@@ -130,17 +149,19 @@ p.linear{
   transform: rotate(-45deg);
   transition: .5s;
 }
-input:checked+.line1{
+
+input:checked + .line1 {
   background-color: rgb(31, 172, 143);
   width: 3px;
   height: 16px;
   content: '';
-  top:6px;
+  top: 6px;
   left: 46px;
   transform: rotate(40deg);
   transition: .5s;
 }
-input:checked~.line2{
+
+input:checked ~ .line2 {
   background-color: rgb(31, 172, 143);
   width: 3px;
   height: 10px;
@@ -149,4 +170,113 @@ input:checked~.line2{
   left: 38.3px;
   transform: rotate(-50deg);
   transition: .5s;
+}
+
+
+@media (max-width: 768px) {
+  .box {
+    margin: 20px;
+    font-size: 16px;
+  }
+
+  .switch {
+    width: 50px;
+    height: 25px;
+  }
+
+  .switch::before {
+    width: 21px;
+    height: 21px;
+    left: 2px;
+    top: 2px;
+  }
+
+  .switch:has(input:checked)::before {
+    left: 27px;
+  }
+
+  .c-l::after {
+    width: 6px;
+    height: 6px;
+    left: 8px;
+    top: 8px;
+  }
+
+  .c-l:has(input:checked)::after {
+    left: 36px;
+    top: 8px;
+  }
+
+  .line1, .line2 {
+    width: 2px;
+    height: 16px;
+  }
+
+  input:checked + .line1 {
+    width: 2px;
+    height: 12px;
+    top: 5px;
+    left: 39px;
+  }
+
+  input:checked ~ .line2 {
+    width: 2px;
+    height: 8px;
+    top: 9px;
+    left: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    margin: 15px;
+    font-size: 14px;
+  }
+
+  .switch {
+    width: 45px;
+    height: 20px;
+  }
+
+  .switch::before {
+    width: 18px;
+    height: 18px;
+    left: 1.5px;
+    top: 1px;
+  }
+
+  .switch:has(input:checked)::before {
+    left: 24px;
+  }
+
+  .c-l::after {
+    width: 5px;
+    height: 5px;
+    left: 7px;
+    top: 7px;
+  }
+
+  .c-l:has(input:checked)::after {
+    left: 33px;
+    top: 7px;
+  }
+
+  .line1, .line2 {
+    width: 2px;
+    height: 14px;
+  }
+
+  input:checked + .line1 {
+    width: 2px;
+    height: 10px;
+    top: 4px;
+    left: 36px;
+  }
+
+  input:checked ~ .line2 {
+    width: 2px;
+    height: 7px;
+    top: 8px;
+    left: 30px;
+  }
 }

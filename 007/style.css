@@ -132,13 +132,14 @@ button:hover {
 @media (max-width: 480px) {
   .game-board {
     width: 90%;
-    gap: 5px;
-    padding: 10px;
+    gap: 7px;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 2fr));
   }
 
   .card {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   img {
@@ -149,6 +150,6 @@ button:hover {
   button {
     width: 70px;
     height: 20px;
-    left: 8rem;
+    left: 8.5rem;
   }
 }

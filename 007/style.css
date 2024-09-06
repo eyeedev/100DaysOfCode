@@ -16,22 +16,26 @@ body {
   height: 100vh;
 }
 
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .game-board {
   width: 500px;
   height: 550px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px -7px 49px -8px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 20px;
-  align-items: start;
-  justify-content: center;
+  padding: 20px;
 }
 
 .card {
-  width: 110px;
-  height: 110px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .card.flipped {
@@ -40,8 +44,8 @@ body {
 }
 
 img {
-  width: 80px;
-  height: 90px;
+  width: 80%;
+  height: auto;
 }
 
 button {
@@ -51,6 +55,10 @@ button {
   height: 30px;
   width: 100px;
   border-radius: 15px;
+  margin-top: 10px;
+  text-align: center;
+ position: relative;
+ left: 12.5rem;
 }
 
 button:hover {
@@ -97,11 +105,10 @@ button:hover {
   transform: rotateY(180deg);
 }
 
-
 @media (max-width: 768px) {
   .game-board {
     width: 80%;
-    gap: .5rem;
+    gap: 10px;
   }
 
   .card {
@@ -111,34 +118,36 @@ button:hover {
 
   img {
     width: 60px;
-    height: 70px;
+    height: auto;
   }
 
   button {
     width: 80px;
     height: 25px;
+    left: 12rem;
   }
 }
 
 @media (max-width: 480px) {
   .game-board {
-    width: 80%;
-    gap: .5rem;
-    padding: .5rem;
+    width: 90%;
+    gap: 5px;
+    padding: 10px;
   }
 
   .card {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: auto;
   }
 
   button {
     width: 70px;
     height: 20px;
+    left: 8rem;
   }
 }

@@ -108,7 +108,8 @@ button:hover {
 @media (max-width: 768px) {
   .game-board {
     width: 80%;
-    gap: 10px;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(95px, 0fr));
   }
 
   .card {
@@ -124,7 +125,7 @@ button:hover {
   button {
     width: 80px;
     height: 25px;
-    left: 12rem;
+    left: 9.5rem;
   }
 }
 

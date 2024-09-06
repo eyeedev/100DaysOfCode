@@ -8,6 +8,8 @@
   --red: rgb(184, 0, 0);
   --blue: rgb(2, 72, 203);
 }
+
+
 body{
   margin: 0;
   height: 100vh;
@@ -19,6 +21,12 @@ body{
   align-content: center;
   align-items: center;
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 main{
   width: 600px;
   height: 600px;

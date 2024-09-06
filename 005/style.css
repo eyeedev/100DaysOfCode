@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&display=swap');
 
-.light-theme{
-  ---background:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(199, 216, 235) 80%);
-   ---text:#29292b;
-  }
-.dark-theme{
- ---background: linear-gradient(90deg, rgba(7,5,55,1) 0%, rgba(75,12,106,1) 87%);
- ---text: rgba(255, 255, 255, .7);
-}
-:root{
-  ---font-family: "Roboto", sans-serif;
-  ---font-family-s:"Audiowide", sans-serif;
-  ---primary-color:rgba(148, 187, 233,1);
-  ---secondary-color:rgb(238, 174, 202);
-  ---gradient-color:linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,0.8687850140056023) 80%);
+.light-theme {
+  ---background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(199, 216, 235) 80%);
+  ---text: #29292b;
 }
 
-body{
+.dark-theme {
+  ---background: linear-gradient(90deg, rgba(7, 5, 55, 1) 0%, rgba(75, 12, 106, 1) 87%);
+  ---text: rgba(255, 255, 255, 0.7);
+}
+
+:root {
+  ---font-family: "Roboto", sans-serif;
+  ---font-family-s: "Audiowide", sans-serif;
+  ---primary-color: rgba(148, 187, 233, 1);
+  ---secondary-color: rgb(238, 174, 202);
+  ---gradient-color: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 0.8687850140056023) 80%);
+}
+
+body {
   margin: 0;
   box-sizing: border-box;
-  font-family:  var(---font-family);
+  font-family: var(---font-family);
   font-weight: 400;
   height: 100vh;
   width: 100%;
@@ -29,109 +31,93 @@ body{
   display: block;
   position: relative;
 }
-header{
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+header {
   position: absolute;
   width: 90%;
   padding: 0 2rem;
   margin-left: 2rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 30rem;
   font-size: 15px;
   font-weight: bolder;
-  text-transform:uppercase;
+  text-transform: uppercase;
 
-  .theme span{
+  .theme span {
     padding: 0 10px 0 0;
 
-    &.icon{
-      position: absolute;
-      top: 18px;
+    &.icon {
       font-size: 20px;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
   }
 }
-  
 
+nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  flex-grow: 2;
 
-nav>ul{
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    flex-grow: 2;
+  li {
+    padding: 5px;
 
-    li{
-      padding: 5px;
-    
-    
-     &:hover{
+    &:hover {
       cursor: pointer;
       text-decoration: underline;
       text-underline-offset: 6px;
       text-decoration-thickness: 2px;
       text-decoration-color: var(---primary-color);
-     }
     }
+  }
 }
 
-main{
+main {
   display: flex;
-  justify-content:flex-start;
+  flex-direction: column;
   align-items: center;
-  position: relative;
-  top: 5rem;
+  justify-content: center;
+  padding-top: 6rem;
 
-  article{
+  article {
     width: 100%;
-    position: relative;
+    text-align: center;
     z-index: 1;
-    padding-right: 3rem;
-    direction: rtl;
-    right: 4rem;
-    top: -2rem;
+    padding: 0 2rem;
 
-    div{
-      position: absolute;
-      top:-9rem;
-      right: 10rem;
-      width: 100%;
+    div {
       animation: glow 2s ease-in-out infinite alternate;
 
-     span{
-      font-family: var(---font-family-s);
-      font-size: 70px;
-      display: flex;
-      flex-direction: column;
-      font-stretch: wider;
-       }
-       
+      span {
+        font-family: var(---font-family-s);
+        font-size: 4rem;
+        display: block;
+      }
     }
 
-    section{
-      font-size: 12px;
-      width: 60%;
-      position: absolute;
-      top:10rem;
-      right: 10rem;
+    section {
+      font-size: 1rem;
+      margin-top: 1rem;
 
-      button{
-        margin-top: .2rem;
+      button {
+        margin-top: 0.5rem;
         border: none;
-        width: 100px;
-        height: 30px;
+        padding: 0.5rem 1rem;
         border-radius: 20px;
         font-weight: bolder;
         color: #fff;
-        background: -webkit-linear-gradient(225deg, rgb(251, 175, 21), rgb(251, 21, 242),             
-         rgb(21, 198, 251)) 0% 0% / 300% 300%;
+        background: linear-gradient(225deg, rgb(251, 175, 21), rgb(251, 21, 242), rgb(21, 198, 251));
         animation: gradient_move 3s ease infinite;
 
-        &:hover{
+        &:hover {
           transform: scale(1.1);
           cursor: pointer;
         }
@@ -139,13 +125,11 @@ main{
     }
   }
 
-  div img{
-    padding: 0;
-    width: 580px;
-    height: 550px;
-    position: relative;
-    bottom: -7rem;
-    left: 8rem;
+  div img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 2rem 0;
     z-index: 2;
     transform: scaleX(-1);
   }
@@ -153,27 +137,88 @@ main{
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 20px rgba(255, 255, 255, .7);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
   }
   to {
-    text-shadow: 0 0 20px rgba(255, 255, 255, .7), 0 0 10px rgba(255, 255, 255, .7);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
   }
 }
+
 @keyframes gradient_move {
-  0%{background-position: 0% 92%}
-  50%{background-position: 100% 9%}
-  100%{background-position: 0% 92%}
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    ---background:#fff;
-    ---text:#29292b;
+    ---background: #fff;
+    ---text: #29292b;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   body {
-    ---background: linear-gradient(90deg, rgba(7,5,55,1) 0%, rgba(75,12,106,1) 87%);
-    ---text: rgba(255, 255, 255, .7);
+    ---background: linear-gradient(90deg, rgba(7, 5, 55, 1) 0%, rgba(75, 12, 106, 1) 87%);
+    ---text: rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    margin: 0;
+    align-items: center;
+    gap: .4rem;
+    font-size: 12px;
+  }
+
+  main {
+    padding-top: 4rem;
+
+    article {
+      padding: 0 1rem;
+
+      div span {
+        font-size: 3rem;
+      }
+
+      section {
+        font-size: 0.9rem;
+      }
+    }
+
+    div img {
+      max-width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 1rem;
+    margin-left: 0;
+  }
+
+  main {
+    padding-top: 2rem;
+
+    article div span {
+      font-size: 2.5rem;
+    }
+
+    article section {
+      font-size: 0.8rem;
+    }
+
+    div img {
+      max-width: 300px;
+    }
   }
 }

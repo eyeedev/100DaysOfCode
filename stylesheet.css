@@ -189,44 +189,7 @@ main {
   }
 }
 
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
 
-  .right {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .name {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-
-  .main-content {
-    padding: 0 20px;
-  }
-
-  .main-content p {
-    font-size: 3rem;
-  }
-
-  .main-content p span {
-    left: 0;
-  }
-
-  .slider {
-    --width: 60px;
-    --height: 45px;
-  }
-
-  .all-projects a {
-    font-size: 14px;
-  }
-}
 
 
 
@@ -350,9 +313,15 @@ nav .left .name {
 }
 
 @media (max-width: 480px) {
+  .left{
+    position: relative;
+    left: 1rem;
+  }
+
   .right ul {
-    flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
+    position: relative;
+    left: -2rem;
   }
 
   .name {
@@ -360,17 +329,49 @@ nav .left .name {
   }
 
   .main-content p {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    position: relative;
+    top: 10rem;
+  }
+
+  .slider{
+    position: relative;
+    bottom: -12rem;
   }
 
   .cards {
     grid-template-columns: 1fr;
+    padding: 0 5rem;
+  }
+
+  .card{
+    margin-bottom: 5px;
   }
 
   .card img {
-    width: 100%;
+    width: 80%;
   }
+
+  .back-icon{
+    top: 5rem;
+    left: 2rem;
+  }
+
+  .project-sub{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -5rem;
+    top: 0rem;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-left: 40px;
+
+  }
+
 }
+
 
 
 

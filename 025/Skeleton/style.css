@@ -77,3 +77,46 @@ body{
         background-position: right -40px top 0;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .card {
+      max-width: 200px;
+    }
+  
+    .card img {
+      height: 120px;
+    }
+  
+    .header {
+      width: 120px;
+      height: 30px;
+    }
+  
+    .p {
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      max-width: 150px;
+    }
+  
+    .card img {
+      height: 100px;
+    }
+  
+    .header {
+      width: 100px;
+      height: 25px;
+    }
+  
+    .p {
+      height: 60px;
+    }
+  }

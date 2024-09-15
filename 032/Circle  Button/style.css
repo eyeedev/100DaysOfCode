@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181817 ;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 15rem;
+        padding: 0.7rem;
+        cursor: pointer;
+        border-radius: 50%;
+
+
+        img{
+            width: 6rem;
+        }
+
+
+
+        svg{
+            position: absolute;
+            padding: 2rem;
+            width: 17rem;
+            transform: rotate(-90deg);
+
+            circle{
+                fill: none;
+                stroke: #6528F7;
+                stroke-width: 5;
+                stroke-dasharray: 0, 442;
+                transition: all 0,3s linear;
+            }
+        }
+
+        :hover circle{
+           stroke-dasharray: 31, 0;
+           transition: all 1.3s;
+        }
+    }
+
+
+}
+

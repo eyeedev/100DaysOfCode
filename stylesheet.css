@@ -4,66 +4,66 @@
   box-sizing: border-box;
 }
 
+.container{
+  width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+}
+
+
 body {
   background: #000000;
   color: #fff;
   font-family: "Roboto", sans-serif;
   user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+
 }
 
 
 nav {
   width: 100%;
-  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
+  padding: 15px 0;
+  flex-grow: 1;
 }
 
-.right {
+.nav-links{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  gap: 2rem;
-}
-
-.right ul {
-  display: flex;
+  justify-content: center;
   list-style: none;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
+  li{
+    padding: 10px;
+    font-size: 1.2rem;
+  }
 }
 
-.right a {
+.nav-links a {
   text-decoration: none;
   color: #fff;
 }
 
 .name {
   font-family: "Caveat", cursive !important;
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: bolder;
 }
 
-main {
-  height: 90vh;
-}
 
 .main-content {
   width: 100%;
-  padding: 0 15px;
-  padding: 0 50px;
+  max-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 3;
+  margin: 2rem 0;
   animation: glow 5s linear 1;
 }
 
@@ -74,12 +74,13 @@ main {
 
 .main-content p span {
   position: relative;
-  left: 4rem;
+  left: 3rem;
 }
 
 .slider {
   width: 100%;
-  margin-top: 2rem;
+  flex-grow: 1;
+  margin-bottom: 5rem ;
   height: var(--height);
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
@@ -96,9 +97,9 @@ main {
   height: var(--height);
   position: absolute;
   left: 100%;
-  animation: autoRun 12s linear infinite;
+  animation: autoRun 9s linear infinite;
   transition: filter 0.5s;
-  animation-delay: calc((12s / var(--quantity)) * (var(--position) - 1));
+  animation-delay: calc((9s / var(--quantity)) * (var(--position) - 1));
 }
 
 .slider .list .item img {
@@ -115,7 +116,10 @@ main {
 }
 
 .all-projects {
-  padding-top: 6rem;
+  flex-grow: 1;
+  border: 1px solid blue;
+  width: 100%;
+  margin-top: 5rem;
 }
 
 .all-projects a {
@@ -125,7 +129,7 @@ main {
   gap: 0.6rem;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .icon {
@@ -154,38 +158,6 @@ main {
 
   to {
     left: calc(var(--width) * -1);
-  }
-}
-
-
-@media (max-width: 768px) {
-  .name {
-    font-size: 2rem;
-  }
-
-  .right ul {
-    gap: 1rem;
-  }
-
-  .main-content p {
-    font-size: 5rem;
-  }
-
-  .main-content p span {
-    left: 1rem;
-  }
-
-  .slider {
-    --width: 80px;
-    --height: 60px;
-  }
-
-  .all-projects {
-    padding-top: 3rem;
-  }
-
-  .all-projects a {
-    font-size: 16px;
   }
 }
 
@@ -283,105 +255,39 @@ nav .left .name {
 }
 
 
-@media (max-width: 768px) {
-  .name {
-    font-size: 1.5rem;
-  }
-
-  .main-content p {
-    font-size: 2rem;
-  }
-
-  .project-sub {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .project-sub li {
-    width: auto;
-    padding: 0 10px;
-  }
-
-  .cards {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
+@media screen and (max-width: 1700px){
+  .container{
+    width: 1400px;
   }
 }
 
-@media (max-width: 480px) {
-  .left{
-    position: relative;
-    left: 1rem;
+@media screen and (max-width: 1500px){
+  .container{
+    width: 1200px;
   }
-
-  .right ul {
-    gap: .5rem;
-    position: relative;
-    left: -2rem;
-  }
-
-  .name {
-    font-size: 1.2rem;
-  }
-
-  .main-content p {
-    font-size: 3rem;
-    position: relative;
-    top: 10rem;
-  }
-
-  .slider{
-    position: relative;
-    bottom: -12rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-    padding: 0 5rem;
-  }
-
-  .card{
-    margin-bottom: 5px;
-  }
-
-  .card img {
-    width: 80%;
-  }
-
-  .back-icon{
-    top: 5rem;
-    left: 2rem;
-  }
-
-  .project-sub{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    left: -5rem;
-    top: 0rem;
-    width: 100%;
-    flex-wrap: nowrap;
-    gap: 0;
-    margin-left: 40px;
-
-  }
-
 }
 
+@media screen and (max-width: 1300px){
+  .container{
+    width: 1024px;
+  }
+}
 
+@media screen and (max-width: 1100px){
+  .container{
+    width: 100vw;
+    padding: 0 10rem !important;
+  }
+}
 
+@media screen and (max-width: 1024px){
+  .container{
+    padding: 0 6rem !important;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 800px){
+  .container{
+    padding: 0 3rem !important;
+  }
+}

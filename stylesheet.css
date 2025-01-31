@@ -108,17 +108,16 @@ nav {
   width: 100%;
   height: fit-content;
   display: grid;
-  grid-template-columns: repeat(5, 20px);
+  grid-template-columns: repeat(7, 20px);
   grid-gap: 5px;
 }
 
 .scroll-button{
+  width: fit-content;
+  margin: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 0;
-  bottom: 2rem;
 
   svg{
 
@@ -127,9 +126,9 @@ nav {
 
 .arrow-icon{
   width: 30px;
-  position: absolute;
-  left: 25px;
-  top: 49px;
+  position: relative;
+  left: -75px;
+  top: -6px;
 }
 .scroll-text{
   position: relative;

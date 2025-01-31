@@ -124,6 +124,13 @@ nav {
 
   }
 }
+
+.arrow-icon{
+  width: 30px;
+  position: absolute;
+  left: 25px;
+  top: 49px;
+}
 .scroll-text{
   position: relative;
   left: -1.8rem;

@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 
@@ -179,6 +180,7 @@ nav {
   display: flex;
   width: 100%;
   border: 1px solid red;
+  overflow: hidden;
 }
 
 .projects-intro{
@@ -186,6 +188,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 1rem;
 
   h1{
     font-size: 3rem;
@@ -199,6 +202,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: 1rem 0;
 
   svg{
     filter: blur(1px);
@@ -237,9 +241,9 @@ nav {
 
 .project-text{
   position: relative;
-  left: -1.8rem;
+  left: -1.3rem;
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: rgb(143, 143, 143);
   }
 }
@@ -249,28 +253,69 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .svg-item{
-  transition: all 6s ease-in-out;
-  width: 12px;
-  height: 12px;
+  transition: transform .4s ease;
+  width: 15px;
+  height: 15px;
+  transform: rotate(-90deg);
+
   polygon{
     fill:rgb(143, 143, 143);
-    stroke:#151B22;
-    stroke-width:3;
+    stroke:#f56737;
+    stroke-width:10;
     stroke-linejoin: round;
-    stroke-dasharray: 0,500;
+    stroke-dasharray: 0,450;
+    transition: all 3s ease;
   }
 }
 
 .svg-item:hover polygon{
-    transform: scale(2);
     stroke: #f56737;
-    stroke-dasharray: 500,0;
+    fill:none;
+    stroke-dasharray: 450,0;
+}
+
+.svg-item:hover{
+  transform: rotate(-90deg) scale(2);
+}
+.projects-slider{
+  display: flex;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  border-radius: 12px;
+  padding: 0 10rem;
+}
+.card{
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(143, 143, 143);
+  width: fit-content;
+  padding: 20px 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+
+  img{
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
+  h3{
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
 
 .slider {
   display: flex;
@@ -313,24 +358,6 @@ nav {
   filter: grayscale(0);
 }
 
-
-.all-projects {
-  flex-grow: 1;
-  border: 1px solid blue;
-  width: 100%;
-  margin-top: 5rem;
-}
-
-.all-projects a {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
 .icon {
   width: 20px;
   height: 20px;
@@ -364,7 +391,7 @@ nav {
 
 
 
-
+/*
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -490,3 +517,4 @@ nav .left .name {
     padding: 0 3rem !important;
   }
 }
+*/

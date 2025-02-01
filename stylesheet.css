@@ -265,8 +265,7 @@ nav {
   }
 }
 
-.svg-item:hover
-  polygon{
+.svg-item:hover polygon{
     transform: scale(2);
     stroke: #f56737;
     stroke-dasharray: 500,0;

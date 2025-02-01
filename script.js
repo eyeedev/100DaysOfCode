@@ -41,7 +41,7 @@ if(!git) {
     console.log(git);
 }
 
-for(let i = 0; i < 365; i++){
+for(let i = 0; i < 200; i++){
     const square = document.createElement('div');
     square.classList.add('square');
     git.appendChild(square);

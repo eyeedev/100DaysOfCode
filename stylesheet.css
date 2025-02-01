@@ -118,18 +118,43 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   svg{
-
+    filter: blur(1px);
   }
+
+}
+.arrow-wrapper{
+  position: relative;
+  width: 30px;
+  height: 50px;
+
 }
 
 .arrow-icon{
-  width: 30px;
-  position: relative;
-  left: -75px;
-  top: -6px;
+  width: 20px;
+  position: absolute;
+  left: -56px;
+  top: 10px;
+  transition: transform .4s ease, opacity .4s ease;
 }
+
+.clone{
+  top: -50px;
+  opacity: 0;
+}
+
+.scroll-button:hover .arrow-icon{
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.scroll-button:hover .clone{
+  transform: translateY(60px);
+  opacity: 1;
+}
+
 .scroll-text{
   position: relative;
   left: -1.8rem;

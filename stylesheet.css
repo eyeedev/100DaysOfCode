@@ -5,7 +5,8 @@
 }
 
 .container{
-  width: 1800px;
+  max-width: 100%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -17,10 +18,10 @@
 
 body {
   background: #000000;
+  background-size: cover;
   color: #fff;
   font-family: "Roboto", sans-serif;
   user-select: none;
-
 }
 
 
@@ -176,11 +177,15 @@ nav {
   transition: background-color 0.5s ease;
 }
 
+
+
 .projects-section{
   display: flex;
   width: 100%;
-  border: 1px solid red;
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  padding: 5rem 0;
+
 }
 
 .projects-intro{
@@ -219,8 +224,8 @@ nav {
 .arrow-project-icon{
   width: 15px;
   position: absolute;
-  left: -39px;
-  top: 15px;
+  left: -37px;
+  top: 16px;
   transition: transform .4s ease, opacity .4s ease;
 }
 
@@ -235,7 +240,7 @@ nav {
 }
 
 .projects-button:hover .project-clone{
-  transform: translateX(-30px);
+  transform: translateX(-28px);
   opacity: 1;
 }
 
@@ -248,7 +253,7 @@ nav {
   }
 }
 
-.custom-ul{
+.indicators{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,50 +277,94 @@ nav {
   }
 }
 
-.svg-item:hover polygon{
+.svg-item.active polygon{
     stroke: #f56737;
     fill:none;
     stroke-dasharray: 450,0;
 }
 
-.svg-item:hover{
+.svg-item.active{
   transform: rotate(-90deg) scale(2);
 }
+
 .projects-slider{
   display: flex;
 }
+
 .cards{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10rem;
-  border-radius: 12px;
   padding: 0 10rem;
+  background: transparent;
 }
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, rgba(72, 72, 73, 0.5), rgba(0,0,0,0.5));
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
 .card{
-  backdrop-filter: blur(10px);
-  border: 1px solid rgb(143, 143, 143);
-  width: fit-content;
-  padding: 20px 10px;
+  position: relative;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1rem;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  mask-image: linear-gradient(to bottom right, rgba(72, 72, 73, 0.5), rgba(0,0,0,0.5));
+  filter: blur(1px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 
   img{
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 17rem;
     object-fit: cover;
     border-radius: 10px;
+    opacity: 0.3;
   }
 
   h3{
-    font-size: 2rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    padding: 20px 0;
+    opacity: 0.5;
   }
 }
+
+.card.active::before{
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+
+.card.active{
+  filter: none;
+  mask-image: none;
+  height: 30rem;
+  background:#000000;
+  border-radius: 10px;
+  border: 8px solid rgb(245, 103, 55);
+  img{
+    width: 23rem;
+    height: 20rem;
+    opacity: 1;
+    backdrop-filter: opacity(0.5);
+  }
+
+  h3{
+    opacity: 1;
+  }
+}
+
+
 
 .slider {
   display: flex;
@@ -517,4 +566,20 @@ nav .left .name {
     padding: 0 3rem !important;
   }
 }
+
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .intro p {
+        width: 100%;
+    }
+    .nav-links {
+        display: none;
+}
+.menu {
+  display: flex;
+}
+}
+
 */

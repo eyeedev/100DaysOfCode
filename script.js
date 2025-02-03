@@ -9,14 +9,7 @@ let currentIndex = 0;
 const cards = document.querySelector('.card');
 const cardContainer = document.querySelector('.cards');
 const indicators = document.querySelectorAll('.svg-item');
-const cardWidth = cards[0].offsetWidth;
 
-
-if(!git) {
-    console.log("not found git");
-} else {
-    console.log(git);
-}
 
 for(let i = 0; i < 200; i++){
     const square = document.createElement('div');
@@ -51,18 +44,7 @@ function animateSquares() {
 animateSquares();
 
 
-document.addEventListener('DOMContentLoaded', () =>
-{
-    function updateSlider(){
-        cardContainer.style.transform =  `translateX(-${currentIndex * cardWidth}px)`;
 
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === currentIndex);
-        })
-    }
-
-    
-});
 
 
 

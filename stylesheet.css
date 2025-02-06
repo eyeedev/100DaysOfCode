@@ -366,79 +366,144 @@ nav {
   }
 }
 
-
-
-.games-section{
-  width: 100%;
+.games-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
   margin: 10rem 0;
-
 }
 
-.games-title{
+.games-section h1{
+  font-size: 3rem;
+}
+
+.games-board {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 2rem;
+  gap: 15px;
+  width: 90%;
+  height: fit-content;
+  max-height: 600px;
+}
+
+.games-board a,
+.games-board span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: blur(.8px);
+  text-decoration: none;
   font-size: 2rem;
-
 }
 
-.games-board{
-  a{
-    text-decoration: none;
+.games-board a:hover,
+.games-board span :hover{
+  transform: scale(1.01);
+  filter: blur(0px);
+}
+
+.games-board a img,
+.hangman {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hangman {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #f56737, #ffda67);
+  color: white;
+  grid-column: span 2;
+}
+
+.games-board a:first-child {
+  grid-row: span 2;
+  img{
+    object-fit: cover;
   }
+}
+
+
+
+.games-board span {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  height: 100%;
 
   img{
-    width: 25rem;
+    object-fit: cover;
   }
-
 }
 
-.games-board:first-child{
-  grid-column: 1/span 2;
-  background-color: #0D9276;
-}
-
-.games-board:nth-child(2){
-  grid-column: 3/span 2;
-  grid-row: 1/span 1;
-}
-
-.games-board:nth-child(3){
-  grid-row: 2/ 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.hangman{
-  background-image: linear-gradient(to right, #5d9ae6, #b7cfe3);
-  color: white;
+.games-board span a {
+  height: 100%;
 }
 
 
 .about-section{
   width: 100%;
   margin: 10rem 0;
+  height: fit-content;
+
+  h1{
+    font-size: 3rem;
+  }
+
+  p{
+    font-size: 1.3rem;
+    line-height:1.5;
+    position: relative;
+    padding: 2rem;
+    max-width: 1100px;
+  }
 }
 
-.contact-section{
-  width: 100%;
-  margin: 10rem 0;
+.about-section p::before{
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 13px;
+  height: 90%;
+  width: 5px;
+  background-color: #f56737;
 }
+
+
+.about-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 
 .slider {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin-top: 6rem;
+  width: var(--width);
+  height: 200px;
   flex-grow: 1;
-  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent, #000 10% 90%, transparent);
 }
 
 .slider .list {
   display: flex;
-  width: 100%;
-  height: calc(var(--height));
-  min-width: calc(var(--width)  * var(--quantity));
+  flex-direction: column;
+  width: var(--width);
+  height: calc(var(--height) * var(--quantity) );
   position: relative;
 }
 
@@ -446,30 +511,38 @@ nav {
   width: var(--width);
   height: var(--height);
   position: absolute;
-  left: 100%;
-  animation: autoRun 9s linear infinite;
-  transition: filter 0.5s;
-  animation-delay: calc((9s / var(--quantity)) * (var(--position) - 1));
+  animation: autoRun 6s linear infinite;
+  animation-delay: calc((6s / var(--quantity)) * (var(--position) - 1));
 }
 
 .slider .list .item img {
   width: 100%;
 }
 
-.slider:hover .item {
-  animation-play-state: paused !important;
-  filter: grayscale(1);
-}
-
-.slider .item:hover {
-  filter: grayscale(0);
-}
 
 .icon {
   width: 20px;
   height: 20px;
   color: #f1eeee;
 }
+
+
+.parallax-footer{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  transform: translateY(100px);
+  background-image: linear-gradient(to bottom, #1E1F22, #1E1F22);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 10rem;
+  display: flex;
+  color: #ffffff;
+  transition: transform 0.5s ease-in-out;
+}
+
 
 
 @keyframes glow {
@@ -486,11 +559,10 @@ nav {
 
 @keyframes autoRun {
   from {
-    left: 100%;
+    bottom: 100%;
   }
-
   to {
-    left: calc(var(--width) * -1);
+    bottom: calc(var(--height) * -1);
   }
 }
 

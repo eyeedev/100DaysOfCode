@@ -9,6 +9,8 @@ let currentIndex = 0;
 const cards = document.querySelector('.card');
 const cardContainer = document.querySelector('.cards');
 const indicators = document.querySelectorAll('.svg-item');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
 
 
 for(let i = 0; i < 200; i++){
@@ -43,8 +45,11 @@ function animateSquares() {
 
 animateSquares();
 
-document.addEventListener('scroll', () => {
-    
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function(){
+        link.classList.toggle('active');
+    })
 })
 
 

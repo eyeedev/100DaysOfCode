@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -66,6 +67,11 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+nav ul li a.active {
+  color: #f56737;
+  font-weight: bold;
 }
 
 
@@ -256,8 +262,9 @@ nav {
 .project-text{
   position: relative;
   left: -1.3rem;
-  p {
-    font-size: 1.2rem;
+  p ,a{
+    font-size: 1.1rem;
+    text-decoration: none;
     color: rgb(143, 143, 143);
   }
 }

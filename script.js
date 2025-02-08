@@ -48,7 +48,8 @@ animateSquares();
 
 navLinks.forEach(link => {
     link.addEventListener('click', function(){
-        link.classList.toggle('active');
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
     })
 })
 

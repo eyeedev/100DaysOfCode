@@ -1,2 +1,3 @@
 # 100DayOfCOde
+Embarking on the 100 Days of Code challenge has been an exhilarating adventure in the world of programming. This commitment to coding for at least one hour every day has not only sharpened my skills but also ignited my passion for creating and problem-solving. Each project represents a step forward, a lesson learned,and a story to tell. Join me as I document my progress ...
  

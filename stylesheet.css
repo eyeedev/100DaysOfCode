@@ -32,6 +32,10 @@ body {
   user-select: none;
 }
 
+a{
+  text-decoration: none;
+}
+
 
 nav {
   width: 100%;

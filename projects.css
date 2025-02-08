@@ -1,59 +1,81 @@
 
+menu{
+  list-style-type: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  right: 0;
+  align-self: flex-end;
+  top: 38%;
 
-  /* Grid Layout */
-  .cards {
+  li{
+    padding: 10px 0;
+    color: #8e8e93;
+    transition: all 0.3s ease;
+
+    &:hover{
+      color: #ccc;
+      cursor: pointer;
+      scale: 1.02;
+    }
+  }
+}
+  .projects-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
     gap: 20px;
+    margin-top: -8rem;
+  }
+  
+
+  .project-card {
+    border-radius: 10px;
     padding: 20px;
+    text-align: left;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
   }
-  
-  /* Card Styles */
-  .card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.5);
-  }
-  
-  /* Card Image */
-  .card img {
-    width: 100%;
-    height: 150px;
+
+  img{
+    width: 18rem;
+    height: 17rem;
     object-fit: cover;
     border-radius: 10px;
+
+  }
+
+  .project-card.active::before{
+    border: 2px solid rgba(255, 255, 255, 0.1);
   }
   
-  /* Title */
-  .card h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
-    color: #ffa500;
+  .project-card:hover {
+    transform: translateY(-5px);
+    p{
+      color: #ccc;
+    }
   }
   
-  /* Caption */
-  .card p {
+
+  .project-card p {
     font-size: 14px;
-    color: #ccc;
+    color: #8e8e93;
+    margin-top: 10px;
   }
   
   /* Responsive */
   @media (max-width: 768px) {
-    .cards {
+    .project-cards {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
   }
   
   @media (max-width: 480px) {
-    .cards {
+    .project-cards {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }

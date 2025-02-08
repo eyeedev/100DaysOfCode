@@ -43,7 +43,9 @@ function animateSquares() {
 
 animateSquares();
 
-
+document.addEventListener('scroll', () => {
+    
+})
 
 
 

@@ -40,6 +40,12 @@ nav {
   align-items: center;
   flex-grow: 1;
   font-size: 1.3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links{
@@ -55,6 +61,7 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: #fff;
+  transition: color 0.3s ease;
 }
 
 .name {

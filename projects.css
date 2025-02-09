@@ -14,7 +14,7 @@ menu{
   li{
     padding: 10px 0;
     color: #8e8e93;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 
     &:hover{
       color: #ccc;
@@ -22,6 +22,10 @@ menu{
       scale: 1.02;
     }
   }
+}
+
+.menu:hover{
+  cursor: pointer;
 }
 
   .projects-cards {

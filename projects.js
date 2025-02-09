@@ -19,13 +19,13 @@ menuItems.forEach((item) => {
 })
 
 menuIcon.addEventListener('click', () => {
-    if (menu) {
-        menu.style.display = menu.style.display === "hidden" ? "block" : "hidden";
-    }
+    console.log('click')
+        menu.style.opacity = menu.style.opacity === "0" ? "1" : "0";
 })
 
 projectCards.forEach((projectCard, index) => {
     if(localStorage.getItem(`card-${index}`) === "active" ){
+        projectCards.forEach((card) => {card.classList.remove('active-card');});
         projectCard.classList.add('active-card');
     }
 

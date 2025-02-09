@@ -13,6 +13,7 @@ const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav ul li a');
 
 
+
 for(let i = 0; i < 200; i++){
     const square = document.createElement('div');
     square.classList.add('square');

@@ -68,9 +68,9 @@ menu{
     margin-top: 10px;
   }
 
-  .active-card{
-    background: transparent;
-    border: 4px solid #f56737;;
+  .active-menu{
+    color: #f56737;
+    font-weight: 500;
   }
   
   /* Responsive */

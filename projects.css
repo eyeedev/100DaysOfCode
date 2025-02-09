@@ -1,6 +1,5 @@
 
 menu{
-  list-style-type: none;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -10,7 +9,7 @@ menu{
   position: sticky;
   right: 0;
   align-self: flex-end;
-  top: 38%;
+  top: 38%;transform: translateX(30%);
 
   li{
     padding: 10px 0;
@@ -24,33 +23,32 @@ menu{
     }
   }
 }
+
   .projects-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 40px;
     margin-top: -8rem;
   }
-  
 
   .project-card {
     border-radius: 10px;
     padding: 20px;
     text-align: left;
     color: white;
+    background-image: linear-gradient(to bottom, rgb(35, 35, 35) 5%, rgba(255, 255, 255, 0) 90%);
+    border: 2px solid #3f3b39;
+    backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   }
 
   img{
-    width: 18rem;
-    height: 17rem;
+    width: 22rem;
+    height: 25rem;
     object-fit: cover;
     border-radius: 10px;
-
-  }
-
-  .project-card.active::before{
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    opacity: .8;
   }
   
   .project-card:hover {
@@ -58,13 +56,21 @@ menu{
     p{
       color: #ccc;
     }
+
+    img{
+      opacity: 1;
+    }
   }
-  
 
   .project-card p {
     font-size: 14px;
     color: #8e8e93;
     margin-top: 10px;
+  }
+
+  .active-card{
+    background: transparent;
+    border: 4px solid #f56737;;
   }
   
   /* Responsive */

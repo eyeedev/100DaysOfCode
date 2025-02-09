@@ -26,11 +26,11 @@ menuIcon.addEventListener('click', () => {
 
 projectCards.forEach((projectCard, index) => {
     if(localStorage.getItem(`card-${index}`) === "active" ){
-        projectCards.forEach((card) => {card.classList.remove('active-card');});
         projectCard.classList.add('active-card');
     }
 
     projectCard.addEventListener('click', () => {
+        projectCards.forEach((card) => {card.classList.remove('active-card');});
         projectCard.classList.toggle('active-card');
 
         if(projectCard.classList.contains('active-card')){

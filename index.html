@@ -14,89 +14,69 @@
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Just+Me+Again+Down+Here&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+<canvas id="hero-canvas"></canvas>
   <div class="container">
-    <nav>
-      <span class="name">EyeDev</span>
-      <ul class="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu">
-        <a>Menu</a>
-        <img src="./assets/icons/menu.svg" class="icon" alt="hamburger" />
+    <nav class="top-bar">
+      <div class="name">Eye<span>DEV</span></div>
+      <div class="nav-blur">
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
+      <a href="https://github.com/eyeedev">&lt;/&gt;</a>
     </nav>
 
-      <section class="hero-section" id="hero">
-        <div class="intro">
-          <h1>Welcome to My <span>100 Days of Code</span> Journey!</h1>
-          <p>Embarking on the 100 Days of Code challenge has been an exhilarating adventure in the world of
-            programming. This commitment to coding for at least one hour every day has not only sharpened my
-            skills but also ignited my passion for creating and problem-solving. Each project represents a
-            step forward, a lesson learned,
-            and a story to tell. Join me as I document my progress ...</p>
-          <div class="scroll-button">
-            <svg height="90" width="90" viewBox="0 0 90 90">
-              <polygon points="45,5 80,25 80,65 45,85 10,65 10,25"
-                       style="fill:#f56737; stroke:#f56737; stroke-width:5; stroke-linejoin: round;"/>
-            </svg>
-            <div class="arrow-wrapper">
-              <img src="./assets/icons/arrow-down.svg" class="arrow-icon" alt="scroll" />
-              <img src="./assets/icons/arrow-down.svg" class="arrow-icon clone" alt="scroll" />
-            </div>
-            <div class="scroll-text">
-              <p>Scroll <br/>to<br/>Explore!</p>
-            </div>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-number">100</span>
+          Days of Creative Coding
+        </h1>
+        <p class="hero-description">
+          Each day, a new challenge, a new learning experience, and a step closer to mastering the art of code.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span>100+</span>
+            <p>Days of Coding</p>
+          </div>
+          <div class="stat">
+            <span>50+</span>
+            <p>Projects</p>
+          </div>
+          <div class="stat">
+            <span>30+</span>
+            <p>Technologies Learned</p>
           </div>
         </div>
+        <a href="#projects" class="cta-button">Explore Projects</a>
+      </div>
+    </section>
 
-        <div class="side-content">
-        <div class="git-simulator"></div>
-        </div>
-      </section>
 
       <section class="projects-section" id="projects">
         <div class="projects-intro">
-          <h1>Projects<br/>Showcase</h1>
-
-          <div class="indicators">
-            <svg class="svg-item active" height="15" width="15" viewBox="0 0 90 90">
-              <polygon points="45,5 80,25 80,65 45,85 10,65 10,25"></polygon>
-            </svg>
-            <svg class="svg-item" height="15" width="15" viewBox="0 0 90 90">
-              <polygon points="45,5 80,25 80,65 45,85 10,65 10,25"></polygon>
-            </svg>
-            <svg class="svg-item" height="15" width="15" viewBox="0 0 90 90">
-              <polygon points="45,5 80,25 80,65 45,85 10,65 10,25"></polygon>
-            </svg>
-            <svg class="svg-item" height="15" width="15" viewBox="0 0 90 90">
-              <polygon points="45,5 80,25 80,65 45,85 10,65 10,25"></polygon>
-            </svg>
-          </div>
-
-          <div class="projects-button">
-            <svg height="60" width="60" viewBox="0 0 90 90">
-              <polygon points="45,5 80,25 80,65 45,85 10,65 10,25"
-                       style="fill:#f56737; stroke:#f56737; stroke-width:5; stroke-linejoin: round;"></polygon>
-            </svg>
-
+          <h1>Projects Showcase</h1>
+            <a href="projects.html" class="projects-button">
             <div class="arrow-wrapper-projects">
-              <a href="projects.html">
               <img src="./assets/icons/arrow-left-light.svg" class="arrow-project-icon" alt="scroll" />
               <img src="./assets/icons/arrow-left-light.svg" class="arrow-project-icon project-clone" alt="scroll" />
             </div>
             <div class="project-text">
               <p>See more cases</p>
             </div>
-          </a>
-          </div>
+            </a>
         </div>
         <div class="projects-slider" style="
           --width: 20rem;
@@ -122,22 +102,29 @@
             <div class="card" >
               <img src="./assets/icons/cube.png" alt="clock">
               <h3>3D Cube</h3>
-              <p>you can almost touch it</p>
+              <p>You can almost touch it</p>
             </div>
-          </div>
+          </div>-
         </div>
       </section>
 
     <section class="games-section" id="games">
-      <h1 class="games-title">Mini Games</h1>
+      <h1 class="games-title">Mini Games Hello Js</h1>
       <div class="games-board">
-        <a href="./020/2048%20Game/index.html"><img src="./assets/icons/2048.png" alt="2048"/></a>
-        <a href="./015/index.html"><div class="hangman"><h3>Hangman Game</h3></div></a>
-        <span>
+        <div class="div1">
+          <a href="./020/2048%20Game/index.html"><img src="./assets/icons/2048.png" alt="2048"/></a>
+        </div>
+        <div class="div2">
+          <a href="./015/index.html"><div class="hangman"><h3>Hangman Game</h3></div></a>
+        </div>
+        <div class="div3">
           <a href="./007/index.html"><img src="./assets/icons/cards.png" alt="side"/></a>
+        </div>
+        <div class="div4">
           <a href="./006/Tic%20Tac%20Toe/index.html"><img src="./assets/icons/tic%20tac%20toe.png" alt="tic-tac-toe"/></a>
-        </span>
-
+        </div>
+        <div class="div5">bottom </div>
+        <div class="div6"> right column</div>
       </div>
     </section>
 
@@ -170,10 +157,6 @@
   </div>
   <footer class="parallax-footer" id="contact">
     <div class="container footer-content">
-      <div class="footer-brand">
-        <h2 class="name">EyeDev</h2>
-        <p>coding & creating</p>
-      </div>
       <div class="socials">
         <h3>Stay Connected</h3>
         <ul>

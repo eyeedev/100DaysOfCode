@@ -8,8 +8,5 @@ This repository contains all my coding challenges, experiments, and projects com
 Check out a live demo of this project:  
 [Live Demo](https://eyeedev.github.io/100DaysOfCode)
 
-Or watch a quick preview GIF:  
-![Demo GIF](https://media.giphy.com/media/3o6ZsX9oH1Y4oF6wso/giphy.gif)
-
 
 

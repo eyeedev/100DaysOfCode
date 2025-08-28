@@ -1,36 +1,20 @@
-const cards = document.querySelectorAll('.project-card');
-let all = document.getElementById('all');
-let games = document.getElementById('games');
-let canvas = document.getElementById('canvas');
-let svg = document.getElementById('svg');
-let cssComponents = document.getElementById('css');
+const filterItems = document.querySelectorAll(".filter-item");
+const projectCards = document.querySelectorAll(".project-card");
 
+filterItems.forEach(item => {
+    item.addEventListener("click", () => {
+        // حذف کلاس active از همه
+        filterItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
 
-function showCards(type) {
-   for(let i = 0; i < cards.length; i++){
-    let card = cards[i]
-    card.style.display = '';
-   }
+        const filter = item.getAttribute("data-filter");
 
-    cards.forEach(card => {
-        let cardType = card.getAttribute("data-type");
-        if (cardType !== type) {
-            card.style.display = "none";
-        }
+        projectCards.forEach(card => {
+            if (filter === "all" || card.getAttribute("data-type") === filter) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
     });
-}
-
-canvas.addEventListener('click', () => showCards('canvas'));
-games.addEventListener('click', ()=>showCards('game'));
-svg.addEventListener('click', ()=>showCards('svg'));
-cssComponents.addEventListener('click', ()=>showCards('css'));
-
-
-
-all.addEventListener('click', ()=>{
-    for(let i = 0; i < cards.length; i++){
-        let card = cards[i]
-        card.style.display = '';
-       }
 });
-

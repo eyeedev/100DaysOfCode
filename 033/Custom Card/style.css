@@ -98,8 +98,8 @@ body{
     border-radius: 40px;
 }
 
-@media (width <= 600px) {
-    .card{
+@media (max-width: 600px) {
+    .card {
         margin: 0 40px;
         padding-left: 50px;
         padding-bottom: 60px;
@@ -109,28 +109,28 @@ body{
         flex-direction: column;
     }
 
-    .card h2{
+    .card h2 {
         margin-right: 0;
         font-size: 26px;
     }
 
-    .profile-picture{
+    .profile-picture {
         margin: -100px 0 30px 0;
         width: 100%;
         max-width: 1000px;
         height: 250px;
     }
 
-    .card p{
+    .card p {
         max-width: 360px;
     }
 
-    .social{
+    .social {
         justify-content: center;
     }
 }
 
-@media(width <= 440px) {
+@media (max-width: 440px) {
     .profile-picture {
         width: 50vw;
         height: 50vw;

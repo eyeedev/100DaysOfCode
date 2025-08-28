@@ -1,9 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 .slider {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin-top: 6rem;
     flex-grow: 1;
     mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
@@ -39,18 +50,6 @@
     filter: grayscale(0);
 }
 
-
-
-.icon {
-    width: 20px;
-    height: 20px;
-    color: #f1eeee;
-}
-
-.contact-section{
-    width: 100%;
-    margin: 10rem 0;
-}
 
 
 @keyframes autoRun {

@@ -19,192 +19,775 @@
 </head>
 
 <body>
-  <div class="container">
-    <nav>
-      <span class="name">EyeDev</span>
-      <ul class="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="menu">
-        <a>Menu</a>
-        <img src="./assets/icons/menu.svg" class="icon" alt="hamburger" />
+<div class="container">
+  <nav class="header-nav">
+    <div class="nav-content">
+      <div class="name">Eye<span>DEV</span></div>
+        <div class="filter-wrapper">
+          <ul class="filter-menu">
+            <li class="filter-item active" data-filter="all">All Projects</li>
+            <li class="filter-item" data-filter="css">CSS Components</li>
+            <li class="filter-item" data-filter="canvas">Canvas</li>
+            <li class="filter-item" data-filter="game">Games</li>
+            <li class="filter-item" data-filter="buttons">Buttons</li>
+            <li class="filter-item" data-filter="svg">SVG</li>
+          </ul>
+        </div>
+      <a href="./index.html" class="home-btn">
+        <img src="assets/icons/house-blank-light.svg" alt="house-svg">
+      </a>
+    </div>
+  </nav>
+
+  <div class="projects-grid">
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/01.png" alt="project-1" />
       </div>
-    </nav>
-    <menu class="menu-items">
-      <li id="css">Css Components</li>
-      <li id="canvas">Canvas</li>
-      <li id="games">Games</li>
-      <li id="svg">Svg</li> 
-      <li id="all">All</li>
-    </menu>
-    <main>
-      <section class="projects-cards">
-        <div class="project-card">
-          <a href="./001/Titlebar/index.html"><img src="./assets/01.png" alt="" />
-            <p>1.Draggable Tab</p>
-          </a>
+      <div class="project-content">
+        <h3 class="project-title">1. Draggable Tab</h3>
+        <div class="project-tech">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JS</span>
         </div>
-        <div class="project-card" data-type="buttons">
-          <a href="./002/Switch Buttons/index.html"><img src="./assets/02.png" alt="" />
-            <p>2.Switch Buttons</p>
-          </a>
+        <p class="project-description">Interactive draggable tab component with smooth animations</p>
+        <div class="project-actions">
+          <a href="./001/Titlebar/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card">
-          <a href="./003/Cube/index.html"><img src="./assets/03.png" alt="" />
-            <p>3.Cube</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="buttons">
+      <div class="project-image">
+        <img src="./assets/02.png" alt="project-2" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">2. Switch Buttons</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Animation</span>
         </div>
-        <div class="project-card">
-          <a href="./004/Stairs/index.html"><img src="./assets/04.png" alt="" />
-            <p>4.2D Text</p>
-          </a>
+        <p class="project-description">Animated toggle switches with multiple styles</p>
+        <div class="project-actions">
+          <a href=./002/SwitchButtons/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card">
-          <a href="./005/index.html"><img src="./assets/05.png" alt="" />
-            <p>5.Light/Dark mode</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/03.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">3. 3D Cube</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">3D</span>
         </div>
-        <div class="project-card" data-type="game">
-          <a href="./006/Tic Tac Toe/index.html"><img src="./assets/06.png" alt="" />
-            <p>6.Tic Tac Toe Game</p>
-          </a>
+        <p class="project-description">Pure CSS 3D cube with rotation effects</p>
+        <div class="project-actions">
+          <a href="./003/Cube/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="game">
-          <a href="./007/index.html"><img src="./assets/07.png" alt="" />
-            <p>7.Memory Game</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/04.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">4. 2D Text Effect</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Typography</span>
         </div>
-        <div class="project-card" data-type="buttons">
-          <a href="./008/index.html"><img src="./assets/08.png" alt="" />
-            <p>8.Toggle Buttons</p>
-          </a>
+        <p class="project-description">Stair-step text animation with depth</p>
+        <div class="project-actions">
+          <a href="./004/Stairs/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card">
-          <a href="./009/index.html"><img src="./assets/09.png" alt="" />
-            <p>9.Rotating Ball</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/05.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">5. Light/Dark Mode</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">LocalStorage</span>
         </div>
-        <div class="project-card" data-type="canvas">
-          <a href="./010/index.html"><img src="./assets/10.png" alt="" />
-            <p>10.Paint simulator</p>
-          </a>
+        <p class="project-description">Smooth theme switching with local storage</p>
+        <div class="project-actions">
+          <a href="./005/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="canvas">
-          <a href="./011/index.html"><img src="./assets/11.png" alt="" />
-            <p>11.Rainbow Arc</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="game">
+      <div class="project-image">
+        <img src="./assets/06.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">6. Tic Tac Toe Game</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Game</span>
+          <span class="tech-tag">AI</span>
         </div>
-        <div class="project-card" data-type="canvas">
-          <a href="./012/index.html"><img src="./assets/12.png" alt="" />
-            <p>12.Collision Detection</p>
-          </a>
+        <p class="project-description">Classic game with AI opponent and score tracking</p>
+        <div class="project-actions">
+          <a href="./006/Tic Tac Toe/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card">
-          <a href=""><img src="./assets/13.png" alt="" />
-            <p>13.Three Js</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="game">
+      <div class="project-image">
+        <img src="./assets/07.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">7. Memory Game</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Game Logic</span>
         </div>
-        <div class="project-card">
-          <a href="./014/index.html"><img src="./assets/14.png" alt="" />
-            <p>14.Rgb ColorPicker</p>
-          </a>
+        <p class="project-description">Card matching game with difficulty levels</p>
+        <div class="project-actions">
+          <a href="./007/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="game">
-          <a href="./015/index.html"><img src="./assets/15.png" alt="" />
-            <p>15.Hangman Game</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="buttons">
+      <div class="project-image">
+        <img src="./assets/08.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">8. Toggle Buttons</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Animation</span>
         </div>
-        <div class="project-card" data-type="svg">
-          <a href="./016/fitness tracker/dist/index.html"><img src="./assets/16.png" alt="" />
-            <p>16.Fitness Tracker</p>
-          </a>
+        <p class="project-description">Collection of animated toggle button designs</p>
+        <div class="project-actions">
+          <a href="./008/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card">
-          <a href="./017/video player/index.html"><img src="./assets/17.png" alt="" />
-            <p>17.Video Player</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/09.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">9. Rotating Ball</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">3D Transform</span>
         </div>
-        <div class="project-card">
-          <a href="./018/accordion/index.html"><img src="./assets/18.png" alt="" />
-            <p>18.Accordion</p>
-          </a>
+        <p class="project-description">3D sphere animation with CSS transforms</p>
+        <div class="project-actions">
+          <a href="./009/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="canvas">
-          <a href="./019/Stars/dist/index.html"><img src="./assets/19.png" alt="" />
-            <p>19.Starry Night</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/10.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">10. Paint Simulator</h3>
+        <div class="project-tech">
+          <span class="tech-tag">Canvas</span>
+          <span class="tech-tag">Drawing</span>
         </div>
-        <div class="project-card" data-type="game">
-          <a href="./020/2048 Game/dist/index.html"><img src="./assets/20.png" alt="" />
-            <p>20.2048 Game</p>
-          </a>
+        <p class="project-description">Digital drawing app with brush tools</p>
+        <div class="project-actions">
+          <a href="./010/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./021/index.html"><img src="./assets/21.png" alt="" />
-            <p>21.Cute Eyes</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/11.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">11. Rainbow Arc</h3>
+        <div class="project-tech">
+          <span class="tech-tag">Canvas</span>
+          <span class="tech-tag">Animation</span>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./022/index.html"><img src="./assets/22.png" alt="" />
-            <p>22.Rainy Cloud</p>
-          </a>
+        <p class="project-description">Colorful arc animation using HTML5 Canvas</p>
+        <div class="project-actions">
+          <a href="./011/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card">
-          <a href="./023/Analog-Clock/index.html"><img src="./assets/23.png" alt="" />
-            <p>23.Analog Clock</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/12.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">12. Collision Detection</h3>
+        <div class="project-tech">
+          <span class="tech-tag">Canvas</span>
+          <span class="tech-tag">Physics</span>
         </div>
-        <div class="project-card" data-type="buttons">
-          <a href="./024/Shimmering Button/index.html"><img src="./assets/24.png" alt="" />
-            <p>24.Shimmering Button</p>
-          </a>
+        <p class="project-description">Physics simulation with bouncing balls</p>
+        <div class="project-actions">
+          <a href="./012/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./025/Skeleton/index.html"><img src="./assets/25.png" alt="" />
-            <p>25.Loading Skeleton</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="3d">
+      <div class="project-image">
+        <img src="./assets/13.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">13. Three.js Scene</h3>
+        <div class="project-tech">
+          <span class="tech-tag">Three.js</span>
+          <span class="tech-tag">3D Graphics</span>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./026/Login/index.html"><img src="./assets/26.png" alt="" />
-            <p>26.Glassy Login</p>
-          </a>
+        <p class="project-description">3D graphics and animations with Three.js</p>
+        <div class="project-actions">
+          <a href="#" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./027/Morpho Loader/index.html"><img src="./assets/27.png" alt="" />
-            <p>27.Morpho Login</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/14.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">14. RGB Color Picker</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Color Theory</span>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./028/Shiny Hover/index.html"><img src="./assets/28.png" alt="" />
-            <p>28.Shiny Hover</p>
-          </a>
+        <p class="project-description">Interactive color selection tool</p>
+        <div class="project-actions">
+          <a href="./014/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="buttons">
-          <a href="./029/Menu Toggle/index.html"><img src="./assets/29.png" alt="" />
-            <p>29.Menu Toggle</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="game">
+      <div class="project-image">
+        <img src="./assets/15.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">15. Hangman Game</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Game Logic</span>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./030/Moon/index.html"><img src="./assets/30.png" alt="" />
-            <p>30.Moon</p>
-          </a>
+        <p class="project-description">Word guessing game with categories</p>
+        <div class="project-actions">
+          <a href="./015/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-        <div class="project-card" data-type="css">
-          <a href="./031/index.html"><img src="./assets/31.png" alt="" />
-            <p>31.Shoe Slider</p>
-          </a>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="svg">
+      <div class="project-image">
+        <img src="./assets/16.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">16. Fitness Tracker</h3>
+        <div class="project-tech">
+          <span class="tech-tag">SVG</span>
+          <span class="tech-tag">Charts</span>
         </div>
-        <div class="project-card" data-type="buttons">
-          <a href="./032/Circle  Button/index.html"><img src="./assets/32.png" alt="" />
-            <p>32.Circle Button</p>
-          </a>
+        <p class="project-description">SVG-based progress charts and statistics</p>
+        <div class="project-actions">
+          <a href="./016/fitness tracker/dist/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/17.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">17. Video Player</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Media API</span>
+        </div>
+        <p class="project-description">Custom video controls and playlist</p>
+        <div class="project-actions">
+          <a href="./017/video player/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/18.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">18. Accordion</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JS</span>
+        </div>
+        <p class="project-description">Collapsible content sections with animations</p>
+        <div class="project-actions">
+          <a href="./018/accordion/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/19.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">19. Starry Night</h3>
+        <div class="project-tech">
+          <span class="tech-tag">Canvas</span>
+          <span class="tech-tag">Animation</span>
+        </div>
+        <p class="project-description">Animated night sky with twinkling stars</p>
+        <div class="project-actions">
+          <a href="./019/Stars/dist/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="game">
+      <div class="project-image">
+        <img src="./assets/20.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">20. 2048 Game</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Algorithm</span>
+        </div>
+        <p class="project-description">Popular sliding puzzle game with scoring</p>
+        <div class="project-actions">
+          <a href="./020/2048 Game/dist/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/21.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">21. Cute Eyes</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Animation</span>
+        </div>
+        <p class="project-description">Following eyes animation with CSS</p>
+        <div class="project-actions">
+          <a href="./021/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/22.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">22. Rainy Cloud</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Weather</span>
+        </div>
+        <p class="project-description">Weather animation with raindrops</p>
+        <div class="project-actions">
+          <a href="./022/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/23.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">23. Analog Clock</h3>
+        <div class="project-tech">
+          <span class="tech-tag">JS</span>
+          <span class="tech-tag">Time API</span>
+        </div>
+        <p class="project-description">Real-time clock with smooth hand movements</p>
+        <div class="project-actions">
+          <a href="./023/Analog-Clock/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="buttons">
+      <div class="project-image">
+        <img src="./assets/24.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">24. Shimmering Button</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Shimmer</span>
+        </div>
+        <p class="project-description">Glossy button with shimmer effect</p>
+        <div class="project-actions">
+          <a href="./024/Shimmering Button/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/25.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">25. Loading Skeleton</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Loading</span>
+        </div>
+        <p class="project-description">Placeholder loading animation</p>
+        <div class="project-actions">
+          <a href="./025/Skeleton/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/26.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">26. Glassy Login</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Glassmorphism</span>
+        </div>
+        <p class="project-description">Glassmorphism login form design</p>
+        <div class="project-actions">
+          <a href="./026/Login/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/27.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">27. Morpho Loader</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Morphing</span>
+        </div>
+        <p class="project-description">Morphing loading animation</p>
+        <div class="project-actions">
+          <a href="./027/Morpho Loader/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/28.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">28. Shiny Hover</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Metallic</span>
+        </div>
+        <p class="project-description">Metallic shine hover effect</p>
+        <div class="project-actions">
+          <a href="./028/Shiny Hover/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="buttons">
+      <div class="project-image">
+        <img src="./assets/29.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">29. Menu Toggle</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Hamburger</span>
+        </div>
+        <p class="project-description">Hamburger menu with smooth transitions</p>
+        <div class="project-actions">
+          <a href="./029/Menu Toggle/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/30.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">30. Moon Animation</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Phases</span>
+        </div>
+        <p class="project-description">Night scene with moon phases</p>
+        <div class="project-actions">
+          <a href="./030/Moon/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/31.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">31. Shoe Slider</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">3D</span>
+        </div>
+        <p class="project-description">Product showcase with 3D transitions</p>
+        <div class="project-actions">
+          <a href="./031/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="buttons">
+      <div class="project-image">
+        <img src="./assets/32.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">32. Circle Button</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./032/Circle  Button/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/33.png" alt="Css Card" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">33.Css Card</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./033/Custom%20Card/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/34.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">34. Slider</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./034/Slider/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/35.png" alt="" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">35. Parallax</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./035/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/36.png" alt="Code Rain" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">36. Code Rain</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./036/CodeRain/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="project-card" data-type="ui">
+      <div class="project-image">
+        <img src="./assets/37.png" alt="Pixel Logo" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">37. Pixel Logo</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./037/square%20animation/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/38.png" alt="Background" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">38. Background</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./038/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="canvas">
+      <div class="project-image">
+        <img src="./assets/39.png" alt="Matrix background" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">39. Matrix background</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./039/matrix%20background/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/32.png" alt="profile-card" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">40. Spotlight Card</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./040" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-type="css">
+      <div class="project-image">
+        <img src="./assets/41.png" alt="profile-card" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">41. Profile card</h3>
+        <div class="project-tech">
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Ripple</span>
+        </div>
+        <p class="project-description">Circular button with ripple effect</p>
+        <div class="project-actions">
+          <a href="./041/Profile%20Card/index.html" class="demo-btn">🚀 Demo</a>
+          <a href="#" class="code-btn">📄 Code</a>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
+</div>
   <script src="projects.js"></script>
 </body>
 

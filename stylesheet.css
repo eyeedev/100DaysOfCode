@@ -59,19 +59,11 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  a{
-    background: var(--primary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-size: 14px;
-  }
 }
-
 
 .nav-links {
   display: flex;
-  gap: 5px;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   justify-content: center;
@@ -106,6 +98,23 @@ a {
   }
 }
 
+.code-btn {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  background: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
 .hero {
   display: flex;
   align-items: center;
@@ -135,7 +144,7 @@ a {
 
 .hero-title {
   font-family: 'Kanit', sans-serif;
-  font-size: clamp(3rem, 8vw,4rem);
+  font-size: 4rem;
   font-weight: 300 !important;
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.8);
@@ -148,7 +157,7 @@ a {
 .hero-number {
   display: inline-block;
   font-weight: 800;
-  font-size: clamp(3rem, 8vw,5rem);
+  font-size: 5rem;
   position: relative;
   background: linear-gradient(135deg, var(--primary-color) 0%, #000000 50%, #ffffff 100%);
   -webkit-background-clip: text;
@@ -620,6 +629,7 @@ a {
   color: #f1eeee;
 }
 
+
 @media screen and (max-width: 1700px){
   .container{
     width: 1400px;
@@ -651,23 +661,172 @@ a {
   }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
   .container{
-    padding: 0 3rem !important;
+    padding: 0.5rem 2rem !important;
+  }
+
+  .name{
+    font-size: 1rem;
+  }
+
+  .nav-blur.show{
+    display: block;
+  }
+
+  .code-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-blur {
+    display: none;
+  }
+
+  .nav-blur.show {
+    display: flex;
+  }
+
+  .nav-links{
+    gap: 1rem;
+  }
+
+  #hero-canvas{
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding: 2rem 0;
+  }
+
+  .hero-title{
+    font-size: 1.5rem;
+  }
+
+  .hero-number{
+    font-size: 2rem;
+  }
+
+
+  .hero-stats {
+    gap: 1.5rem;
+    padding: 0;
+    span{
+      font-size: 1rem;
+    }
+    p{
+      font-size: 10px;
+    }
+  }
+
+  .socials {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .projects-slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: stretch;
+    padding: 1rem 0;
+  }
+
+  .projects-intro h1{
+    font-size: 2rem;
+  }
+
+  .projects-slider .cards {
+    display: contents;
+  }
+
+  .card {
+    flex: none;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background: rgba(12, 12, 12, 0.6);
+    filter: none;
+    backdrop-filter: blur(10px);
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+
+  .card h3 {
+    font-size: 12px;
+    margin: 8px 0 4px;
+    opacity: 1;
+  }
+
+  .card p {
+    font-size: 10px;
+    color: #ccc;
+  }
+
+  .card.active{
+    filter: none;
+    mask-image: none;
+    height: 15rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    img{
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+    }
+
+    h3{
+      opacity: 1;
+      font-size: 14px;
+    }
+  }
+
+  .games-section {
+      display: none;
+  }
+  .about-section {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-title {
+    font-size: 2rem !important;
+    display: block !important;
+    text-align: center !important;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  .about-title span {
+    display: inline !important;
+    transform: none !important;
+    font-weight: 500 !important;
+    color: rgba(142, 142, 142, 0.8) !important;
+  }
+
+  .pc-card-wrapper {
+    justify-content: center;
+    align-items: center;
   }
 }
 
-@media (max-width: 768px) {
-    .hero-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .intro p {
-        width: 100%;
-    }
-    .nav-links {
-        display: none;
-}
-.menu {
-  display: flex;
-}
-}

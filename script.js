@@ -269,6 +269,12 @@ cardsContainer.style.transform = `translateX(${(window.innerWidth - cardWidth)/2
 setInterval(showNextCard, intervalTime);
 
 
+//hamber button
+function toggleMenu() {
+    document.querySelector(".nav-blur").classList.toggle("show");
+}
+
+
 
 
 

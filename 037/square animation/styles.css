@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a0f1a;
+  font-family: sans-serif;
+}
+
+.logo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.letter,
+.e-grid {
+  display: grid;
+  gap: 2px;
+}
+
+.letter {
+  grid-template-columns: repeat(5, 10px);
+  grid-template-rows: repeat(7, 10px);
+}
+
+.e-grid {
+  grid-template-columns: repeat(4, 10px);
+  grid-template-rows: repeat(8, 10px);
+}
+
+.letter div{
+  width: 10px;
+  height: 10px;
+  background-color: #00ff73;
+  box-shadow: 0 0 6px #00ff73;
+  opacity: 0;
+}
+
+.e-container {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* C */
+.c div:nth-child(2),
+.c div:nth-child(3),
+.c div:nth-child(4),
+.c div:nth-child(6),
+.c div:nth-child(10),
+.c div:nth-child(11),
+.c div:nth-child(16),
+.c div:nth-child(21),
+.c div:nth-child(25),
+.c div:nth-child(27),
+.c div:nth-child(28),
+.c div:nth-child(29) {
+  opacity: 1;
+}
+
+/* O */
+.o div:nth-child(2),
+.o div:nth-child(3),
+.o div:nth-child(4),
+.o div:nth-child(6),
+.o div:nth-child(10),
+.o div:nth-child(11),
+.o div:nth-child(15),
+.o div:nth-child(16),
+.o div:nth-child(20),
+.o div:nth-child(21),
+.o div:nth-child(25),
+.o div:nth-child(27),
+.o div:nth-child(28),
+.o div:nth-child(29) {
+  opacity: 1;
+}
+
+/* D */
+.d div:nth-child(1),
+.d div:nth-child(2),
+.d div:nth-child(3),
+.d div:nth-child(4),
+.d div:nth-child(6),
+.d div:nth-child(10),
+.d div:nth-child(11),
+.d div:nth-child(15),
+.d div:nth-child(16),
+.d div:nth-child(20),
+.d div:nth-child(21),
+.d div:nth-child(25),
+.d div:nth-child(26),
+.d div:nth-child(27),
+.d div:nth-child(28),
+.d div:nth-child(29) {
+  opacity: 1;
+}
+
+/* E - inside the tall container */
+.e-grid div{
+  background-color: #00ff73;
+  box-shadow: 0 0 6px #00ff73;
+  color: #0a0f1a;
+}
+
+.e-grid div:nth-child(6),
+.e-grid div:nth-child(7),
+.e-grid div:nth-child(9),
+.e-grid div:nth-child(12),
+.e-grid div:nth-child(13),
+.e-grid div:nth-child(14),
+.e-grid div:nth-child(15),
+.e-grid div:nth-child(16),
+.e-grid div:nth-child(17),
+.e-grid div:nth-child(22),
+.e-grid div:nth-child(23) {
+  background-color: transparent;
+  border: .5px solid #00ff73;
+}
+

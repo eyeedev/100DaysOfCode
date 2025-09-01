@@ -117,11 +117,12 @@ a {
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   height: 100vh;
   overflow: hidden;
   width: 100%;
+  padding-top: 10%;
 
 }
 #hero-canvas {
@@ -138,7 +139,6 @@ a {
   align-items: center;
   justify-content: flex-start;
   width: fit-content;
-  padding:0 2rem;
   z-index: 2;
 }
 
@@ -731,6 +731,8 @@ a {
     position: relative;
     top: auto;
     left: auto;
+    right: auto;
+    margin: 0 auto;
   }
 
   .projects-slider {

@@ -35,7 +35,7 @@ body::before {
 
 .header-nav {
   width: 100vw;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
   left: 0;
@@ -83,10 +83,19 @@ body::before {
   }
 }
 
-.home-btn:hover {
+.home-btn:hover, .back-button:hover {
   transform: scale(1.02);
 }
 
+.back-button{
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.back-button img{
+  height: 15px;
+}
 
 .filter-wrapper {
   display: flex;
@@ -99,7 +108,6 @@ body::before {
   gap: 30px;
   list-style: none;
   padding: 12px 25px;
-  border-radius: 50px;
 }
 
 .filter-item {
@@ -107,7 +115,6 @@ body::before {
   font-size: 14px;
   color: #8e8e93;
   cursor: pointer;
-  border-radius: 25px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -299,7 +306,6 @@ body::before {
 
 /* Stats Counter */
 .stats-widget {
-  position: fixed;
   bottom: 30px;
   right: 30px;
   width: 80px;
@@ -367,95 +373,10 @@ body::before {
   100% { transform: rotate(360deg); }
 }
 
-/* Remove old stats */
 .stats {
   display: none;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .filter-menu {
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 15px 20px;
-  }
-
-  .filter-item {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .home-btn {
-    padding: 6px 16px;
-    font-size: 0.9rem;
-  }
-
-  .stats-widget {
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .stats-number {
-    font-size: 1rem;
-  }
-
-  .stats-label {
-    font-size: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
-  .filter-container {
-    padding: 10px 0;
-  }
-
-  .project-card {
-    padding: 15px;
-  }
-
-  .project-image {
-    height: 120px;
-  }
-
-  .project-title {
-    font-size: 0.9rem;
-  }
-
-  .project-description {
-    font-size: 0.8rem;
-  }
-
-  .demo-btn, .code-btn {
-    padding: 6px 12px;
-    font-size: 0.7rem;
-  }
-}
 
 /* Loading Animation */
 @keyframes fadeInUp {
@@ -479,3 +400,109 @@ body::before {
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 .project-card:nth-child(5) { animation-delay: 0.5s; }
 .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+
+@media screen and (max-width: 1700px){
+  .container{
+    width: 1400px;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .container{
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .container{
+    width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .container{
+    width: 100vw;
+    padding: 0 10rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .container{
+    padding: 0 6rem !important;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .project-image {
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    padding: 0.5rem !important;
+  }
+  .name,
+  .home-btn {
+    display: none;
+  }
+
+  .back-button{
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .nav-content{
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    left: 0;
+    .filter-wrapper{
+      justify-self: center;
+      width: 100%;
+    }
+  }
+
+  .filter-menu{
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    li{
+      font-size: 12px;
+      padding: 0;
+    }
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+    gap: 14px;
+
+  }
+
+  .project-card {
+    padding: 8px;
+  }
+
+  .project-image {
+    height: 80px;
+  }
+
+  .project-title {
+    font-size: 0.9rem;
+  }
+  .project-tech span{
+    color: #8e8e93;
+    border-color: #8e8e93;
+  }
+
+  .project-description, .project-actions span {
+    display: none;
+  }
+}
+
